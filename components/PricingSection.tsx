@@ -106,8 +106,7 @@ const PricingSection = () => {
 
                                 <ul role="list" className="mt-8 space-y-4 text-gray-300">
                                     {plan.features.map((feature, index) => (
-                                        <li key={index} className="flex justify-end gap-x-3">
-                                            <span>{feature}</span>
+                                        <li key={index} className="flex gap-x-3">
                                             <svg
                                                 className="h-6 w-5 flex-none text-[#32d09f]"
                                                 viewBox="0 0 20 20"
@@ -120,6 +119,7 @@ const PricingSection = () => {
                                                     clipRule="evenodd"
                                                 />
                                             </svg>
+                                            <span>{feature}</span>
                                         </li>
                                     ))}
                                 </ul>

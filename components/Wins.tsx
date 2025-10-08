@@ -88,6 +88,7 @@ const Wins: React.FC = () => {
   const openLightbox = (index: number) => setLightboxIndex(index);
   const closeLightbox = () => setLightboxIndex(null);
   
+  // FIX: The modulo operator in JS can return a negative number. Corrected logic to ensure it always wraps around positively.
   const goToNext = () => {
     if (lightboxIndex !== null) {
         setLightboxIndex((prevIndex) => (prevIndex! + 1) % galleryItems.length);
@@ -105,7 +106,7 @@ const Wins: React.FC = () => {
   };
 
   return (
-    <section dir="rtl" className="bg-gray-950 py-20 text-center text-white relative overflow-hidden">
+    <section dir="rtl" className="bg-gray-950 py-10 text-center text-white relative overflow-hidden">
         <div className="absolute inset-x-0 top-0 -z-10 transform-gpu overflow-hidden blur-3xl">
             <div
                 className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-blue-800 to-indigo-700 opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"

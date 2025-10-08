@@ -27,7 +27,7 @@ export default function FrequentlyAskedQuestions() {
 
     return (
         <div dir="rtl" className="w-full py-12 sm:py-16">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl px-4 lg:px-8">
                 <div className="mb-12 max-w-2xl">
                     <div className="mb-8 flex justify-start">
                         <div className="relative inline-block bg-gradient-to-r from-blue-600 to-indigo-400 bg-clip-text text-sm font-bold uppercase leading-6 text-transparent">
@@ -44,15 +44,13 @@ export default function FrequentlyAskedQuestions() {
                     </div>
                 </div>
                 <div role="display" className="relative z-10 flex h-auto w-full flex-col items-center justify-center">
+                    {/* FIX: Removed unnecessary React.Fragment and moved the key prop to the AccordionItem for idiomatic list rendering. */}
                     <Accordion type="single" collapsible className="w-full">
                         {content.map((item, index) => (
-                            // Fix: Wrap AccordionItem in a React.Fragment to handle the 'key' prop. This resolves a series of cascading type errors.
-                            <React.Fragment key={index}>
-                                <AccordionItem value={`item-${index}`}>
-                                    <AccordionTrigger>{item.question}</AccordionTrigger>
-                                    <AccordionContent>{item.answer}</AccordionContent>
-                                </AccordionItem>
-                            </React.Fragment>
+                            <AccordionItem key={index} value={`item-${index}`}>
+                                <AccordionTrigger>{item.question}</AccordionTrigger>
+                                <AccordionContent>{item.answer}</AccordionContent>
+                            </AccordionItem>
                         ))}
                     </Accordion>
                 </div>

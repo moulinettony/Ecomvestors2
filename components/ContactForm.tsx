@@ -20,6 +20,21 @@ const ReloadIcon = ({ className }: { className?: string }) => (
     </svg>
 );
 
+// FIX: Moved form utility components outside the main component function.
+// Defining components inside another component is an anti-pattern in React, causing them to be re-created on every render.
+// This can lead to performance issues and confusing type errors from static analysis tools.
+const FormItem = ({ children, className = '' }: { children: React.ReactNode, className?: string }) => (
+    <div className={`flex w-full flex-col items-start justify-start gap-2 ${className}`}>{children}</div>
+);
+const FormLabel = ({ children, htmlFor }: { children: React.ReactNode, htmlFor?: string }) => (
+    <label htmlFor={htmlFor} className="text-sm font-medium leading-none text-white">{children}</label>
+);
+const FormDescription = ({ children }: { children: React.ReactNode }) => (
+    <p className="text-[0.8rem] text-gray-400">{children}</p>
+);
+const FormMessage = ({ children }: { children?: React.ReactNode }) => (
+    children ? <p className="text-[0.8rem] font-medium text-red-500">{children}</p> : null
+);
 
 const ContactForm: React.FC = () => {
     const [isLoading, setLoading] = useState<boolean>(false);
@@ -92,22 +107,9 @@ const ContactForm: React.FC = () => {
         }
     };
 
-    const FormItem = ({ children, className = '' }: { children: React.ReactNode, className?: string }) => (
-        <div className={`flex w-full flex-col items-start justify-start gap-2 ${className}`}>{children}</div>
-    );
-    const FormLabel = ({ children, htmlFor }: { children: React.ReactNode, htmlFor?: string }) => (
-        <label htmlFor={htmlFor} className="text-sm font-medium leading-none text-white">{children}</label>
-    );
-    const FormDescription = ({ children }: { children: React.ReactNode }) => (
-        <p className="text-[0.8rem] text-gray-400">{children}</p>
-    );
-    const FormMessage = ({ children }: { children?: React.ReactNode }) => (
-        children ? <p className="text-[0.8rem] font-medium text-red-500">{children}</p> : null
-    );
-
     return (
         <div dir="rtl" className="w-full py-12 sm:py-16" id="form">
-            <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 lg:grid-cols-2">
+            <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-4 lg:px-8 lg:grid-cols-2">
                 <div className="max-w-md">
                     <div className="mb-8 flex justify-start">
                         <div className="relative inline-block bg-gradient-to-r from-blue-600 to-indigo-400 bg-clip-text text-sm font-bold uppercase leading-6 text-transparent">

@@ -20,6 +20,7 @@ const features: Array<{
     },
 ];
 
+// FIX: The Card component was wrapped in a redundant React.Fragment, which has been removed for cleaner code.
 const Card = ({
     title,
     description,
@@ -30,32 +31,27 @@ const Card = ({
     image: string;
 }) => {
     return (
-        <React.Fragment>
-            <div className="flex h-full flex-col items-start justify-start overflow-hidden rounded-3xl border border-gray-800/50 bg-gray-950/50 p-7 text-start shadow-2xl shadow-blue-500/10 backdrop-blur-md">
-                <h3 className="mb-2 text-xl font-bold text-white">{title}</h3>
-                <p className="text-gray-400">{description}</p>
-                <div className="-mb-14 mt-8 flex w-full items-center justify-center">
-                    <img
-                        src={image}
-                        alt={title}
-                        className="size-full rounded-xl shadow-2xl shadow-blue-500/10 backdrop-blur-md"
-                    />
-                </div>
+        <div className="flex h-full flex-col items-start justify-start overflow-hidden rounded-3xl border border-gray-800/50 bg-gray-950/50 p-7 text-start shadow-2xl shadow-blue-500/10 backdrop-blur-md">
+            <h3 className="mb-2 text-xl font-bold text-white">{title}</h3>
+            <p className="text-gray-400">{description}</p>
+            <div className="-mb-14 mt-8 flex w-full items-center justify-center">
+                <img
+                    src={image}
+                    alt={title}
+                    className="size-full rounded-xl shadow-2xl shadow-blue-500/10 backdrop-blur-md"
+                />
             </div>
-        </React.Fragment>
+        </div>
     );
 };
 
 function Cards() {
     return (
-        <React.Fragment>
-            <div className="flex flex-col place-content-center place-items-center items-center justify-center gap-4 md:grid md:grid-cols-2 lg:grid-cols-2">
-                {features.map((feature, index) => (
-                    // Fix: Spread props was causing a TypeScript error with the 'key' prop. Explicitly passing props resolves this.
-                    <Card key={index} title={feature.title} description={feature.description} image={feature.image} />
-                ))}
-            </div>
-        </React.Fragment>
+        <div className="flex flex-col place-content-center place-items-center items-center justify-center gap-4 md:grid md:grid-cols-2 lg:grid-cols-2">
+            {features.map((feature, index) => (
+                <Card key={index} title={feature.title} description={feature.description} image={feature.image} />
+            ))}
+        </div>
     );
 }
 

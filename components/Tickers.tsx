@@ -93,6 +93,7 @@ const MarqueeColumn = ({ testimonials, reverse = false, duration = "80s" }: { te
         style={{ '--duration': duration } as React.CSSProperties}
     >
         <ul className={`absolute top-0 left-0 flex flex-col gap-4 animate-marquee-vertical ${reverse ? 'marquee-reverse' : ''} motion-reduce:animate-none`}>
+            {/* FIX: The key prop is for React's reconciliation algorithm and is not passed to the component. */}
             {[...testimonials, ...testimonials].map((t, i) => <TestimonialCard key={i} testimonial={t} />)}
         </ul>
     </div>
@@ -108,7 +109,8 @@ const Tickers: React.FC = () => {
                 }
 
                 .animate-marquee-vertical {
-                    animation: marquee-vertical 25s linear infinite;
+                    animation: marquee-vertical linear infinite;
+                    animation-duration: var(--duration);
                 }
 
                 .marquee-reverse {

@@ -5,8 +5,11 @@
     --color-earthcore-600: #2563eb; /* Tailwind blue-600 */
 }
 
-body {
-    font-family: 'Noto Sans', sans-serif;
+/* Apply the font globally, overriding Tailwind's base styles */
+html,
+body,
+#root {
+    font-family: 'JetBrains Mono', monospace;
 }
 
 /* A special button style provided by the user */
@@ -24,7 +27,7 @@ body {
     color: #fff;
     cursor: pointer;
     display: inline-flex;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     height: 48px;
     justify-content: center;
     line-height: 1;
