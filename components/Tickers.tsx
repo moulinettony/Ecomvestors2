@@ -59,7 +59,10 @@ const column3Data: Testimonial[] = [
     },
 ];
 
-const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => (
+// FIX: Changed TestimonialCard component to be defined as a React.FC.
+// This helps TypeScript's type inference correctly handle special React props like 'key'
+// and resolves incorrect 'property does not exist' errors at the call site.
+const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }) => (
     <li className="w-full flex-shrink-0">
         <div className="flex h-full items-end flex-col justify-between rounded-3xl bg-gray-950/50 border border-gray-800/50 backdrop-blur-md p-6 space-y-6">
             <div className="aspect-video w-full overflow-hidden rounded-xl">
@@ -93,7 +96,6 @@ const MarqueeColumn = ({ testimonials, reverse = false, duration = "80s" }: { te
         style={{ '--duration': duration } as React.CSSProperties}
     >
         <ul className={`absolute top-0 left-0 flex flex-col gap-4 animate-marquee-vertical ${reverse ? 'marquee-reverse' : ''} motion-reduce:animate-none`}>
-            {/* FIX: The key prop is for React's reconciliation algorithm and is not passed to the component. */}
             {[...testimonials, ...testimonials].map((t, i) => <TestimonialCard key={i} testimonial={t} />)}
         </ul>
     </div>

@@ -39,7 +39,10 @@ interface AccordionProps {
   className?: string;
 }
 
-const Accordion = ({ children, type, collapsible = false, className }: AccordionProps) => {
+// FIX: Changed accordion components to be defined as React.FC.
+// This helps TypeScript's type inference to correctly handle props and children,
+// resolving incorrect 'property is missing' errors at various call sites.
+const Accordion: React.FC<AccordionProps> = ({ children, type, collapsible = false, className }) => {
   const [activeItem, setActiveItem] = useState<string | null>(null);
 
   const handleSetActiveItem = (value: string) => {
@@ -64,7 +67,7 @@ interface AccordionItemProps {
   className?: string;
 }
 
-const AccordionItem = ({ children, value, className }: AccordionItemProps) => {
+const AccordionItem: React.FC<AccordionItemProps> = ({ children, value, className }) => {
   return (
     <AccordionItemContext.Provider value={{ value }}>
         <div className={`border-b border-gray-700 ${className || ''}`}>
@@ -81,7 +84,7 @@ interface AccordionTriggerProps {
   className?: string;
 }
 
-const AccordionTrigger = ({ children, className }: AccordionTriggerProps) => {
+const AccordionTrigger: React.FC<AccordionTriggerProps> = ({ children, className }) => {
   const { activeItem, setActiveItem } = useAccordionContext();
   const { value } = useAccordionItemContext();
   const isOpen = activeItem === value;
@@ -114,7 +117,7 @@ interface AccordionContentProps {
   className?: string;
 }
 
-const AccordionContent = ({ children, className }: AccordionContentProps) => {
+const AccordionContent: React.FC<AccordionContentProps> = ({ children, className }) => {
   const { activeItem } = useAccordionContext();
   const { value } = useAccordionItemContext();
   const isOpen = activeItem === value;

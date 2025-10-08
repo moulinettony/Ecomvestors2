@@ -1,5 +1,6 @@
 
 
+
 import React from 'react';
 
 const CourseCard = () => {
@@ -177,7 +178,7 @@ const AiDevelopmentCard = () => {
           </div>
           <div className="flex-grow relative overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]">
             <div className="absolute inset-0 animate-code-scroll">
-              <div className="p-4 font-mono text-xs text-white/80 whitespace-pre">
+              <div className="p-4 text-xs text-white/80 whitespace-pre">
                 {[...codeLines, ...codeLines].map((line, index) => (
                   <p key={index} className={line.startsWith('// After') || line.startsWith('✓') ? 'text-[#b2ef43]' : (line.startsWith('//') ? 'text-gray-400' : '')}>{line}</p>
                 ))}

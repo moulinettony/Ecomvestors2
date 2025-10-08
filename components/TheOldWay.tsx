@@ -45,8 +45,10 @@ const features: Array<{
     },
 ];
 
-// FIX: The Card component was wrapped in a redundant React.Fragment, which has been removed for cleaner code.
-const Card = ({ title, description, icon }: { title: string; description: string; icon: React.ReactNode }) => {
+// FIX: Changed Card component to be defined as a React.FC.
+// This helps TypeScript's type inference correctly handle special React props like 'key'
+// and resolves incorrect 'property does not exist' errors at the call site.
+const Card: React.FC<{ title: string; description: string; icon: React.ReactNode }> = ({ title, description, icon }) => {
     return (
         <div className="flex h-full flex-col items-start justify-start rounded-3xl border border-gray-800/50 bg-gray-950/50 p-7 text-start shadow-2xl shadow-blue-500/10 backdrop-blur-md">
             <div className="mb-8 flex size-16 items-center justify-center rounded-xl bg-gray-900 p-4">{icon}</div>

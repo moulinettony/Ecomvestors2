@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import Button from './ui/Button';
 
@@ -20,19 +21,19 @@ const ReloadIcon = ({ className }: { className?: string }) => (
     </svg>
 );
 
-// FIX: Moved form utility components outside the main component function.
-// Defining components inside another component is an anti-pattern in React, causing them to be re-created on every render.
-// This can lead to performance issues and confusing type errors from static analysis tools.
-const FormItem = ({ children, className = '' }: { children: React.ReactNode, className?: string }) => (
+// FIX: Explicitly defined the 'children' prop for form utility components.
+// In newer versions of React (@types/react >= 18), React.FC no longer implicitly includes 'children',
+// causing type errors. This change makes the 'children' prop explicit, resolving the issue.
+const FormItem: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = '' }) => (
     <div className={`flex w-full flex-col items-start justify-start gap-2 ${className}`}>{children}</div>
 );
-const FormLabel = ({ children, htmlFor }: { children: React.ReactNode, htmlFor?: string }) => (
+const FormLabel: React.FC<{ children: React.ReactNode; htmlFor?: string }> = ({ children, htmlFor }) => (
     <label htmlFor={htmlFor} className="text-sm font-medium leading-none text-white">{children}</label>
 );
-const FormDescription = ({ children }: { children: React.ReactNode }) => (
+const FormDescription: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <p className="text-[0.8rem] text-gray-400">{children}</p>
 );
-const FormMessage = ({ children }: { children?: React.ReactNode }) => (
+const FormMessage: React.FC<{ children?: React.ReactNode }> = ({ children }) => (
     children ? <p className="text-[0.8rem] font-medium text-red-500">{children}</p> : null
 );
 
