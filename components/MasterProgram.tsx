@@ -1,0 +1,92 @@
+import React from 'react';
+import SparklesCore from './ui/SparklesCore';
+
+const features: Array<{
+    title: string;
+    description: string;
+    image: string;
+}> = [
+    {
+        title: 'أحدث الطرق والهياكل',
+        description:
+            'كعضو في برنامج EV، ستحصل على وصول حصري إلى أكثر من 35 تحديث فيديو حول طرق وهياكل الدفع عند الاستلام. كن على اطلاع بأحدث المعلومات وتعلم الهياكل اللازمة لتأسيس عملك بنجاح.',
+        image: 'https://www.ecomvestors.com/_next/image?url=%2Fassets%2Fimages%2Fimage-1.png&w=2048&q=75',
+    },
+    {
+        title: 'تدريب فردي يومي',
+        description:
+            'في برنامج EV، نعمل جنبًا إلى جنب مع المدربين وفريقك لمساعدتك في تأسيس نموذج عملك للدفع عند الاستلام. من خلال التواصل اليومي وجلسات التدريب الفردي على قناة Slac الخاصة بك، نقدم لك أسهل طريقة للتعلم من خلال الممارسة.',
+        image: 'https://www.ecomvestors.com/_next/image?url=%2Fassets%2Fimages%2Fimage-2.png&w=1080&q=75',
+    },
+];
+
+const Card = ({
+    title,
+    description,
+    image,
+}: {
+    title: string;
+    description: string;
+    image: string;
+}) => {
+    return (
+        <React.Fragment>
+            <div className="flex h-full flex-col items-start justify-start overflow-hidden rounded-3xl border border-gray-800/50 bg-gray-950/50 p-7 text-start shadow-2xl shadow-blue-500/10 backdrop-blur-md">
+                <h3 className="mb-2 text-xl font-bold text-white">{title}</h3>
+                <p className="text-gray-400">{description}</p>
+                <div className="-mb-14 mt-8 flex w-full items-center justify-center">
+                    <img
+                        src={image}
+                        alt={title}
+                        className="size-full rounded-xl shadow-2xl shadow-blue-500/10 backdrop-blur-md"
+                    />
+                </div>
+            </div>
+        </React.Fragment>
+    );
+};
+
+function Cards() {
+    return (
+        <React.Fragment>
+            <div className="flex flex-col place-content-center place-items-center items-center justify-center gap-4 md:grid md:grid-cols-2 lg:grid-cols-2">
+                {features.map((feature, index) => (
+                    // Fix: Spread props was causing a TypeScript error with the 'key' prop. Explicitly passing props resolves this.
+                    <Card key={index} title={feature.title} description={feature.description} image={feature.image} />
+                ))}
+            </div>
+        </React.Fragment>
+    );
+}
+
+const MasterProgram: React.FC = () => {
+    return (
+        <div dir="rtl" className="mt-5 flex w-full flex-col items-center justify-between">
+            <div className="relative z-0 flex h-auto w-full flex-col items-center justify-center">
+                <div className="relative isolate">
+                    <div
+                        className={
+                            'container relative mx-auto my-4 w-full max-w-7xl rounded-3xl px-4 sm:my-10 sm:px-6 md:px-8'
+                        }
+                    >
+                        <Cards />
+                    </div>
+
+                    <div className="absolute inset-0 -z-10 h-screen w-full">
+                        <SparklesCore
+                            id="tsparticlesmasterprogram"
+                            background="transparent"
+                            minSize={0.6}
+                            maxSize={1.4}
+                            particleDensity={4}
+                            className="h-full w-full"
+                            particleColor="#FFFFFF"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default MasterProgram;
