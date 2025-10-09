@@ -1,6 +1,7 @@
 
 
 
+
 import React from 'react';
 
 const CourseCard = () => {
@@ -132,7 +133,7 @@ const ResourceVaultCard = () => (
       {/* Your Sales */}
       <div className="flex flex-col items-center text-center">
         <div className="w-16 h-16 border border-gray-800 rounded-lg bg-gray-950/80 backdrop-blur-sm flex items-center justify-center">
-          <img src="https://framerusercontent.com/images/0gGPo0G2Tn7mkfCvISKT1bdH0.png" alt="Shopify" className="w-10 h-10" />
+          <img src="https://www.edigitalagency.com.au/wp-content/uploads/Shopify-Logo-White.png" alt="Shopify" className="w-10 h-10" />
         </div>
         <p className="text-[10px] mt-2 text-white/90">Your Sales</p>
       </div>

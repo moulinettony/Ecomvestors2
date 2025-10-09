@@ -101,12 +101,18 @@ const HeroSection: React.FC = () => {
                             <div className="mx-auto max-w-[900px] py-8">
                                 <div className="wistia_responsive_padding shadow-lg md:rounded-[50px] overflow-hidden" style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
                                     <div className="wistia_responsive_wrapper" style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}>
-                                        <div
-                                            className="wistia_embed wistia_async_jgb3pqs49i videoFoam=true"
+                                        <iframe
+                                            src="https://fast.wistia.net/embed/iframe/jgb3pqs49i?videoFoam=true"
+                                            title="Ecomvestors Master Program V4"
+                                            allow="autoplay; fullscreen"
+                                            allowTransparency={true}
+                                            frameBorder="0"
+                                            scrolling="no"
+                                            name="wistia_embed"
+                                            width="100%"
+                                            height="100%"
                                             style={{ height: '100%', position: 'relative', width: '100%' }}
-                                        >
-                                            &nbsp;
-                                        </div>
+                                        ></iframe>
                                     </div>
                                 </div>
                             </div>

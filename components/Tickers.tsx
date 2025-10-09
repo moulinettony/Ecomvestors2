@@ -10,16 +10,16 @@ interface Testimonial {
 
 const column1Data: Testimonial[] = [
     {
-        image: 'https://framerusercontent.com/images/riThmRsLY0P73f82C88Ccuu2cWk.png',
+        image: 'https://www.ecomvestors.com/assets/testimonials/images/image-1.jpg',
         quote: 'The best.. quick communication, and fast execution. Next is 20k days.',
-        avatar: 'https://framerusercontent.com/images/Kc0ISBr4MMAbNFwZmEumJtm5O5w.png',
+        avatar: 'https://www.ecomvestors.com/assets/avatars/1.png',
         name: 'Ouassim',
         country: 'Netherlands',
     },
     {
-        image: 'https://framerusercontent.com/images/6vazZZth0VsYRqJYAJ2LWeVLAE.png',
+        image: 'https://www.ecomvestors.com/assets/testimonials/images/image-2.jpg',
         quote: 'Real insights, no other like this.',
-        avatar: 'https://framerusercontent.com/images/vcGjZ1DuGrxecqc0mvSDtDJRfIU.png',
+        avatar: 'https://www.ecomvestors.com/assets/avatars/2.png',
         name: 'Chris',
         country: 'Netherlands',
     },
@@ -27,16 +27,16 @@ const column1Data: Testimonial[] = [
 
 const column2Data: Testimonial[] = [
     {
-        image: 'https://framerusercontent.com/images/mAM3FZh2gxBi2lXeVtCBQJI.png',
+        image: 'https://www.ecomvestors.com/assets/testimonials/images/image-3.jpg',
         quote: 'Been here now for 2 months, still surprised every time with the support and tips that i receive',
-        avatar: 'https://framerusercontent.com/images/WcTezAxmn8PiIE3RobqJX3e5NY.png',
+        avatar: 'https://www.ecomvestors.com/assets/avatars/3.png',
         name: 'Louis',
         country: 'France',
     },
     {
-        image: 'https://framerusercontent.com/images/riThmRsLY0P73f82C88Ccuu2cWk.png',
+        image: 'https://www.ecomvestors.com/assets/testimonials/images/image-4.jpg',
         quote: 'The best.. quick communication, and fast execution. Next is 20k days.',
-        avatar: 'https://framerusercontent.com/images/Kc0ISBr4MMAbNFwZmEumJtm5O5w.png',
+        avatar: 'https://www.ecomvestors.com/assets/avatars/4.png',
         name: 'Ouassim',
         country: 'Netherlands',
     },
@@ -44,16 +44,16 @@ const column2Data: Testimonial[] = [
 
 const column3Data: Testimonial[] = [
     {
-        image: 'https://framerusercontent.com/images/MbOoggWcbraZXbU8cpZ6EGCirY.png',
+        image: 'https://www.ecomvestors.com/assets/testimonials/images/image-5.jpg',
         quote: 'First month of coaching 🫡 never expexted this guys',
-        avatar: 'https://framerusercontent.com/images/LXCbKG7UmSDTjdQ8YItdRigFPz8.png',
+        avatar: 'https://www.ecomvestors.com/assets/avatars/5.png',
         name: 'Josh',
         country: 'United Kingdom',
     },
     {
-        image: 'https://framerusercontent.com/images/2Lglznvf8J1jOmAWR2cj3T3JGRQ.png',
+        image: 'https://www.ecomvestors.com/assets/testimonials/images/image-6.jpg',
         quote: '', // Empty quote handled gracefully
-        avatar: 'https://framerusercontent.com/images/9Ha33sQpTh8bLXRPRAZi1pyI7H0.png',
+        avatar: 'https://www.ecomvestors.com/assets/avatars/6.png',
         name: 'Ben',
         country: 'Netherlands',
     },
