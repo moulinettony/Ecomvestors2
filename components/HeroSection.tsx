@@ -148,11 +148,10 @@ const HeroSection: React.FC = () => {
                             </div>
                         </div>
                         <div className="text-right">
-                            <p className="text-2xl tracking-normal text-gray-300 lg:pb-6 lg:text-4xl lg:leading-10">
-                                إليك خطة محكمة لتحقيق دخل يتراوح بين 20,000€ إلى 50,000€ شهريًا أو أكثر، من خلال التجارة{' '}
-                                <br className="max-lg:hidden" /> الإلكترونية في أوروبا الشرقية
-                            </p>
-                            <p className="text-sm tracking-normal text-gray-300 lg:text-xl lg:leading-10">
+                            <h1 className="text-2xl font-bold tracking-normal text-gray-50 lg:pb-6 lg:text-4xl lg:leading-10">
+                                إليك خطة محكمة لتحقيق دخل يتراوح بين 20k € إلى 50k € شهريًا، في أوروبا الشرقية
+                            </h1>
+                             <p className="text-sm tracking-normal text-gray-300 lg:text-xl lg:leading-10">
                                 أكثر من 800 عضو • أكثر من 650 منتج رابح •{' '}
                                 <span className="relative inline-block bg-gradient-to-r from-green-500 to-green-800 bg-clip-text uppercase tracking-normal text-transparent">
                                     {' '}
