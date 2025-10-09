@@ -141,7 +141,7 @@ const HeroSection: React.FC = () => {
                                 />
 
                                 <a href="#form" className="flex w-full items-center justify-center lg:w-auto">
-                                    <Button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 transform-gpu duration-200 hover:scale-105 active:scale-95 border border-white bg-green-600 font-semibold text-white shadow-2xl shadow-green-500/50 transition-all hover:bg-green-700 h-12 px-16 rounded-full" variant={'special'}>
+                                    <Button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 transform-gpu duration-200 hover:scale-105 active:scale-95 border border-white bg-[rgb(29 202 93)] font-semibold text-white shadow-2xl shadow-green-500/50 transition-all hover:bg-[rgb(19 165 73)] h-12 px-16 rounded-full" variant={'special'}>
                                         احجز مكانك الآن{' '}
                                     </Button>
                                 </a>
