@@ -49,11 +49,18 @@ const Card: React.FC<{
 
 function Cards() {
     return (
+        <>
+        <div className="lg:mb-12 flex flex-col place-content-center place-items-center items-center justify-center gap-4 md:grid md:grid-cols-2 lg:grid-cols-2">
+            {features.map((feature, index) => (
+                <Card key={index} title={feature.title} description={feature.description} image={feature.image} />
+            ))}
+        </div>
         <div className="flex flex-col place-content-center place-items-center items-center justify-center gap-4 md:grid md:grid-cols-2 lg:grid-cols-2">
             {features.map((feature, index) => (
                 <Card key={index} title={feature.title} description={feature.description} image={feature.image} />
             ))}
         </div>
+        </>
     );
 }
 

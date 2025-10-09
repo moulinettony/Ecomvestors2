@@ -9,7 +9,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 const Button: React.FC<ButtonProps> = ({ children, variant = 'default', size = 'default', shape, className, ...props }) => {
   if (variant === 'special') {
     return (
-      <button className={`button-29 ${className || ''}`} {...props}>
+      <button className={`${className || ''}`} {...props}>
         {children}
       </button>
     );

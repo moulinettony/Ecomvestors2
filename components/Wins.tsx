@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import SparklesCore from './ui/SparklesCore';
 
@@ -165,18 +166,20 @@ const Wins: React.FC = () => {
                 <button 
                     onClick={handleLoadMore}
                     className="w-full max-w-sm bg-white text-gray-900 font-bold py-4 px-8 rounded-full flex items-center justify-center gap-3 hover:bg-gray-200 transition-colors duration-300 text-lg shadow-lg">
-                    <span className="h-7 w-7 rounded-full bg-gray-200 flex items-center justify-center gap-0.5">
-                        <span className="h-1 w-1 rounded-full bg-blue-600"></span>
-                        <span className="h-1 w-1 rounded-full bg-blue-600"></span>
-                        <span className="h-1 w-1 rounded-full bg-blue-600"></span>
+                    <span className="flex items-center justify-center text-blue-600">
+                        <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path opacity=".4" d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81v8.37C2 19.83 4.17 22 7.81 22h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2Z" fill="currentColor"></path>
+                            <path opacity=".97" d="M12 10.311a1.31 1.31 0 1 0 0-2.62 1.31 1.31 0 0 0 0 2.62ZM8.31 13.691c-.72 0-1.31.59-1.31 1.31 0 .72.59 1.31 1.31 1.31.72 0 1.31-.59 1.31-1.31 0-.72-.59-1.31-1.31-1.31ZM15.69 13.691c-.72 0-1.31.59-1.31 1.31 0 .72.59 1.31 1.31 1.31.72 0 1.31-.59 1.31-1.31 0-.72-.59-1.31-1.31-1.31Z" fill="currentColor"></path>
+                        </svg>
                     </span>
                     تحميل المزيد
                 </button>
             )}
             <a href="#" className="w-full max-w-sm sm:max-w-md md:max-w-lg bg-blue-600 text-white font-bold py-4 px-8 rounded-full flex items-center justify-center gap-3 hover:bg-blue-700 transition-colors duration-300 text-lg shadow-lg shadow-blue-500/50">
-                <span className="h-7 w-7 rounded-full bg-white flex items-center justify-center">
-                    <span className="h-2 w-2 rounded-full bg-blue-600"></span>
-                </span>
+                    <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path opacity=".4" d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81v8.37C2 19.83 4.17 22 7.81 22h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2Z" fill="currentColor"></path>
+                        <path d="M12 15.881a3.88 3.88 0 1 0 0-7.76 3.88 3.88 0 0 0 0 7.76ZM17 7.5a.99.99 0 0 1-.71-.29c-.09-.1-.16-.21-.21-.33A.995.995 0 0 1 16 6.5c0-.13.03-.26.08-.38.05-.13.12-.23.21-.33.23-.23.58-.34.9-.27.07.01.13.03.19.06.06.02.12.05.18.09.05.03.1.08.15.12.09.1.16.2.21.33.05.12.08.25.08.38s-.03.26-.08.38-.12.23-.21.33c-.1.09-.21.16-.33.21-.12.05-.25.08-.38.08Z" fill="currentColor"></path>
+                    </svg>
                 اكتشف المزيد من قصص النجاح على انستغرام
             </a>
         </div>
