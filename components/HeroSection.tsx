@@ -147,7 +147,7 @@ const HeroSection: React.FC = () => {
                             </div>
                         </div>
                         <div className="text-right">
-                            <p className="text-sm tracking-normal text-gray-300 lg:pb-6 lg:text-2xl lg:leading-10">
+                            <p className="text-2xl tracking-normal text-gray-300 lg:pb-6 lg:text-4xl lg:leading-10">
                                 إليك خطة محكمة لتحقيق دخل يتراوح بين 20,000€ إلى 50,000€ شهريًا أو أكثر، من خلال التجارة{' '}
                                 <br className="max-lg:hidden" /> الإلكترونية في أوروبا الشرقية
                             </p>
@@ -213,6 +213,18 @@ const HeroSection: React.FC = () => {
                                     </div>
                                 </div>
                             </div>
+                            <div className="my-8 flex justify-center max-lg:px-4">
+                                <a
+                                    href="#form"
+                                    style={{
+                                        borderColor: '#5b7b4e',
+                                        boxShadow: '0 0 12px 3px #5b7b4eff inset',
+                                    }}
+                                    className="w-full rounded-lg border-2 bg-[#426135] py-4 px-7 text-center text-xl font-bold text-white no-underline transition-transform duration-200 hover:scale-105 active:scale-95"
+                                >
+                                    سجّل الآن
+                                </a>
+                            </div>
                             <p className="text-sm tracking-normal text-gray-200 max-lg:px-4 lg:text-xl lg:leading-10">
                                 اكتشف كيفية بناء عمل تجارة إلكترونية حقيقي بتكلفة منخفضة، تحت إشراف مبتكري نموذج EV.
                                 مرحبًا بك في برنامج إيكومفستورس ماستر بروجرام V5
@@ -226,84 +238,6 @@ const HeroSection: React.FC = () => {
                                     'اكتشف كيفية بناء عمل تجارة إلكترونية حقيقي بتكلفة منخفضة، تحت إشراف مبتكري نموذج EV. مرحبًا بك في برنامج إيكومفستورس ماستر بروجرام V4'
                                 }
                             </h3>
-
-                            {/* Desktop Buttons */}
-                            <div className=" mx-4 mt-6 hidden flex-col items-center justify-center gap-3 sm:gap-4 lg:mx-8 lg:mt-12  lg:flex lg:flex-row lg:gap-5">
-                                <img
-                                    className="pb-4 lg:pb-6 "
-                                    src={'https://www.ecomvestors.com/assets/readytostart.png'}
-                                    width={170}
-                                    height={10}
-                                    alt={'Ready to start'}
-                                />
-
-                                <a href="#form" className="flex w-full items-center justify-center lg:w-auto">
-                                    <Button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 transform-gpu duration-200 hover:scale-105 active:scale-95 border border-white bg-green-600 font-semibold text-white shadow-2xl shadow-green-500/50 transition-all hover:bg-green-700 h-12 px-16 rounded-full" variant={'special'}>
-                                        احجز مكانك الآن{' '}
-                                    </Button>
-                                </a>
-
-                                <a
-                                    href="https://calendly.com/aassimmentoring/ev-partnerships?month=2024-04"
-                                    className="flex w-full items-center justify-center lg:w-auto"
-                                    target="_self"
-                                    rel="noopener noreferrer"
-                                >
-                                    <Button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 transform-gpu transition-transform duration-200 hover:scale-105 active:scale-95 border border-white bg-blue-700 font-bold text-white shadow-2xl shadow-blue-500/50 hover:bg-gray-900 hover:text-blue-600 active:bg-blue-950 active:text-blue-500 h-12 px-16 rounded-full" variant={'secondary'}>
-                                        كن شريكا أو مستثمرًا{' '}
-                                    </Button>
-                                </a>
-
-                                <img
-                                    className="pt-4 lg:pb-6 lg:pt-0"
-                                    src={'https://www.ecomvestors.com/assets/needmoreinfo.png'}
-                                    width={170}
-                                    height={10}
-                                    alt={'Need more info'}
-                                />
-                            </div>
-
-                            {/* Mobile Buttons */}
-                            <div className="relative  mt-6 flex flex-row items-center justify-center gap-[1px] lg:hidden">
-                                <img
-                                    className="ml-1 pt-8"
-                                    src={'https://www.ecomvestors.com/assets/readytostart.png'}
-                                    width={90}
-                                    height={10}
-                                    alt={'Ready to start'}
-                                />
-
-                                <div className="flex flex-col items-center gap-2">
-                                    <a href="#form" className="flex w-full items-center justify-center">
-                                        <Button className="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 transform-gpu duration-200 hover:scale-105 active:scale-95 border border-white bg-green-600 font-semibold text-white shadow-2xl shadow-green-500/50 transition-all hover:bg-green-700 h-10 px-4 rounded-full text-[10px]" variant={'green'} size={'md'} shape={'pill'}>
-                                            احجز مكانك الآن{' '}
-                                        </Button>
-                                    </a>
-                                    <a
-                                        href="https://calendly.com/aassimmentoring/ev-partnerships?month=2024-04"
-                                        className="flex w-full items-center justify-center"
-                                        target="_self"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <Button
-                                            className="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 transform-gpu transition-transform duration-200 hover:scale-105 active:scale-95 border border-white bg-blue-700 font-bold text-white shadow-2xl shadow-blue-500/50 hover:bg-gray-900 hover:text-blue-600 active:bg-blue-950 active:text-blue-500 h-10 px-4 rounded-full text-[10px]"
-                                            variant={'secondary'}
-                                            size={'md'}
-                                            shape={'pill'}
-                                        >
-                                            كن شريكا أو مستثمرًا{' '}
-                                        </Button>
-                                    </a>
-                                </div>
-
-                                <img
-                                    className="pb-14"
-                                    src={'https://www.ecomvestors.com/assets/needmoreinfo.png'}
-                                    width={90}
-                                    height={10}
-                                    alt={'Need more info'}
-                                />
-                            </div>
 
                             <div className="relative mt-8 flex flex-col items-center justify-center gap-5 lg:mt-10">
                                 <div className="flex w-full flex-row items-center justify-center">

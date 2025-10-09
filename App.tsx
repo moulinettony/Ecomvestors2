@@ -16,7 +16,7 @@ import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-between overflow-hidden bg-gray-950 border-y border-blue-950">
+    <div className="flex min-h-screen w-full flex-col items-center justify-between overflow-hidden bg-[#181c14] border-y border-blue-950">
       <main className="w-full">
         <Announcement />
         <HeroSection />
