@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import AnimatedTooltip from './ui/AnimatedTooltip';
 import Button from './ui/Button';
@@ -131,7 +132,7 @@ const HeroSection: React.FC = () => {
             <div className="relative z-0 flex h-auto w-full flex-col items-center justify-center">
                 <div className="relative isolate">
                     <div
-                        className='container relative mx-auto w-full max-w-7xl rounded-3xl px-4 sm:my-2 sm:px-6  md:px-8'
+                        className='container relative mx-auto w-full max-w-[950px] rounded-3xl px-4 sm:my-2 sm:px-6  md:px-8'
                     >
                         <div className="mt-2 flex justify-center px-4 sm:mb-8">
                             <img
