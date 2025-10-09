@@ -135,9 +135,9 @@ const HeroSection: React.FC = () => {
                     >
                         <div className="mt-2 flex justify-center px-4 sm:mb-8">
                             <img
-                                src={'https://www.ecomvestors.com/logos/new-logo.png'}
-                                height={50}
-                                width={200}
+                                src={'/new-logo.png'}
+                                height={75}
+                                width={75}
                                 alt={'Logo'}
                             />
                         </div>
