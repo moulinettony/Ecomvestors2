@@ -18,11 +18,20 @@ const features: Array<{
             'في برنامج EV، نعمل جنبًا إلى جنب مع المدربين وفريقك لمساعدتك في تأسيس نموذج عملك للدفع عند الاستلام. من خلال التواصل اليومي وجلسات التدريب الفردي على قناة Slac الخاصة بك، نقدم لك أسهل طريقة للتعلم من خلال الممارسة.',
         image: 'https://www.ecomvestors.com/assets/images/image-2.png',
     },
+    {
+        title: 'منتجات رابحة مضمونة',
+        description:
+            'نوفر لك منتجًا رابحًا مضمونًا من بين 5 منتجات تم اختبارها بعناية، بناءً على بيانات حصرية من شركائنا الصينيين الذين يقدمون أحدث المنتجات الرائجة.',
+        image: 'https://www.ecomvestors.com/assets/images/image-3.png',
+    },
+    {
+        title: 'أقل تكاليف للتنفيذ',
+        description:
+            'نقدم أقل تكاليف للتنفيذ تبدأ من 3 يوروهات فقط مع معدل تأكيد يصل إلى 90%. نجاحك هو استثمارنا الأكبر، وهدفنا أن نبني معًا مستقبلًا مليئًا بالفرص.',
+        image: 'https://www.ecomvestors.com/assets/images/image-4.png',
+    },
 ];
 
-// FIX: Changed Card component to be defined as a React.FC.
-// This helps TypeScript's type inference correctly handle special React props like 'key'
-// and resolves incorrect 'property does not exist' errors at the call site.
 const Card: React.FC<{
     title: string;
     description: string;
@@ -49,18 +58,11 @@ const Card: React.FC<{
 
 function Cards() {
     return (
-        <>
-        <div className="lg:mb-12 flex flex-col place-content-center place-items-center items-center justify-center gap-4 md:grid md:grid-cols-2 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {features.map((feature, index) => (
                 <Card key={index} title={feature.title} description={feature.description} image={feature.image} />
             ))}
         </div>
-        <div className="flex flex-col place-content-center place-items-center items-center justify-center gap-4 md:grid md:grid-cols-2 lg:grid-cols-2">
-            {features.map((feature, index) => (
-                <Card key={index} title={feature.title} description={feature.description} image={feature.image} />
-            ))}
-        </div>
-        </>
     );
 }
 
@@ -74,6 +76,17 @@ const MasterProgram: React.FC = () => {
                             'container relative mx-auto my-4 w-full max-w-7xl rounded-3xl px-4 sm:my-10 sm:px-6 md:px-8'
                         }
                     >
+                        <div className="mb-12 text-center">
+                            <a href="#" className="mb-2 inline-block text-sm font-semibold text-blue-400">
+                                برنامج الماستر
+                            </a>
+                            <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">
+                                كل ما تحتاجه للنجاح
+                            </h2>
+                            <p className="mx-auto mt-4 max-w-3xl text-lg text-gray-300">
+                                لقد قمنا بتضمين كل ما تحتاجه للنجاح في برنامج واحد. لا مزيد من التخمين، فقط خطة عمل مثبتة.
+                            </p>
+                        </div>
                         <Cards />
                     </div>
 

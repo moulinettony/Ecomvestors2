@@ -21,12 +21,12 @@ const App: React.FC = () => {
         <Announcement />
         <HeroSection />
         <Tickers />
+        <BottomGrid />
         <NewHeroSection />
         <TheOldWay />
         <MasterProgram />
         <WhosMe />
         <Wins />
-        <BottomGrid />
         <PricingSection />
         <FrequentlyAskedQuestions />
         <Question />

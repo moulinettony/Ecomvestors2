@@ -118,7 +118,7 @@ const HeroSection: React.FC = () => {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        backgroundColor: 'rgb(29 78 216 / 75%)',
+        backgroundColor: '#4262359c',
         borderRadius: '0.5rem',
         width: '125px',
         height: '80px',
@@ -134,7 +134,7 @@ const HeroSection: React.FC = () => {
                     <div
                         className='container relative mx-auto w-full max-w-[950px] rounded-3xl px-4 sm:my-2 sm:px-6  md:px-8'
                     >
-                        <div className="mt-2 flex justify-center px-4 sm:mb-8">
+                        <div className="flex justify-center px-4">
                             <img
                                 src={'https://i.ibb.co/svx9GP8b/new-logo.png'}
                                 height={75}
@@ -142,13 +142,13 @@ const HeroSection: React.FC = () => {
                                 alt={'Logo'}
                             />
                         </div>
-                        <div className="mb-8 mt-6 flex justify-center ">
+                        <div className="mb-2 flex justify-center ">
                             <div className="relative inline-block bg-gradient-to-r from-blue-600 to-indigo-400 bg-clip-text text-[10px] font-bold text-transparent lg:text-sm">
                                 تقديم النسخة 4.0 من برنامج إيكومفيستورز
                             </div>
                         </div>
                         <div className="text-right">
-                            <h1 className="text-2xl font-bold tracking-normal text-gray-50 lg:pb-6 lg:text-4xl lg:leading-10">
+                            <h1 className="text-2xl font-bold tracking-normal text-gray-50 pb-1 lg:text-4xl lg:leading-10">
                                 إليك خطة محكمة لتحقيق دخل يتراوح بين 20k € إلى 50k € شهريًا، في أوروبا الشرقية
                             </h1>
                              <p className="text-sm tracking-normal text-gray-300 lg:text-xl lg:leading-10">
@@ -158,7 +158,7 @@ const HeroSection: React.FC = () => {
                                     متوسط دخل 20,000€ شهريًا{' '}
                                 </span>
                             </p>
-                            <p className="text-sm tracking-normal text-gray-400 lg:text-xl lg:leading-10">
+                            <p className="text-sm tracking-normal text-white lg:text-xl lg:leading-10 mt-6">
                                 <span className="relative inline-block bg-gradient-to-r from-green-500 to-green-800 bg-clip-text uppercase tracking-normal text-transparent">
                                     الخطوة الأولى:
                                 </span>{' '}
@@ -188,7 +188,7 @@ const HeroSection: React.FC = () => {
                                                 ) : (
                                                     <div style={{ position: 'relative', width: '100%', height: '100%', cursor: 'pointer' }} onClick={() => setIsPlaying(true)}>
                                                         <img
-                                                            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                                                            src="https://i.ibb.co/8nhLfrk6/Whats-App-Image-2025-10-09-at-8-28-09-PM.jpg"
                                                             alt="Play video about commission-only sales reps"
                                                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                                         />
@@ -220,9 +220,10 @@ const HeroSection: React.FC = () => {
                                         borderColor: '#5b7b4e',
                                         boxShadow: '0 0 12px 3px #5b7b4eff inset',
                                     }}
-                                    className="w-full max-w-[900px] rounded-lg border-2 bg-[#426135] py-4 px-7 text-center text-xl font-bold text-white no-underline transition-transform duration-200 hover:scale-105 active:scale-95"
+                                    className="w-full flex flex-col max-w-[900px] rounded-lg border-2 bg-[#426135] py-4 px-7 text-center text-xl font-bold text-white no-underline transition-transform duration-200 hover:scale-105 active:scale-95"
                                 >
-                                    سجّل الآن
+                                  <span> انضم قبل زيادة السعر</span>
+                                <span className="font-light text-sm text-[#ffffffcc] mt-1">( وفر 850$ على الوصول مدى الحياة اليوم )</span>
                                 </a>
                             </div>
                             <p className="text-sm tracking-normal text-gray-200 max-lg:px-4 lg:text-xl lg:leading-10">

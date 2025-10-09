@@ -6,17 +6,17 @@ import React from 'react';
 
 const CourseCard = () => {
   const features = [
-    { 
+    {
       name: 'System check',
       icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><g><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.27,47,25.53a8,8,0,0,0,4.2,0c1-.26,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0Z"></path></g></svg>,
       active: true
     },
-    { 
+    {
       name: 'Research',
       icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><g><path d="M152,96H104a8,8,0,0,0-8,8v48a8,8,0,0,0,8,8h48a8,8,0,0,0,8-8V104A8,8,0,0,0,152,96Zm-8,48H112V112h32Zm88,0H216V112h16a8,8,0,0,0,0-16H216V56a16,16,0,0,0-16-16H160V24a8,8,0,0,0-16,0V40H112V24a8,8,0,0,0-16,0V40H56A16,16,0,0,0,40,56V96H24a8,8,0,0,0,0-16H40v32H24a8,8,0,0,0,0,16H40v40a16,16,0,0,0,16,16H96v16a8,8,0,0,0,16,0V216h32v16a8,8,0,0,0,16,0V216h40a16,16,0,0,0,16-16V160h16a8,8,0,0,0,0-16Zm-32,56H56V56H200v95.87s0,.09,0,.13,0,.09,0,.13V200Z"></path></g></svg>,
       active: false
     },
-    { 
+    {
       name: 'Meta',
       icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><g><path d="M114.34,154.34l96-96a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32ZM128,88a63.9,63.9,0,0,1,20.44,3.33,8,8,0,1,0,5.11-15.16A80,80,0,0,0,48.49,160.88,8,8,0,0,0,56.43,168c.29,0,.59,0,.89-.05a8,8,0,0,0,7.07-8.83A64.92,64.92,0,0,1,64,152,64.07,64.07,0,0,1,128,88Zm99.74,13a8,8,0,0,0-14.24,7.3,96.27,96.27,0,0,1,5,75.71l-181.1-.07A96.24,96.24,0,0,1,128,56h.88a95,95,0,0,1,42.82,10.5A8,8,0,1,0,179,52.27a112,112,0,0,0-156.66,137A16.07,16.07,0,0,0,37.46,200H218.53a16,16,0,0,0,15.11-10.71,112.35,112.35,0,0,0-5.9-88.3Z"></path></g></svg>,
       active: false
@@ -31,7 +31,7 @@ const CourseCard = () => {
       icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><g><path d="M24,128A72.08,72.08,0,0,1,96,56H204.69L194.34,45.66a8,8,0,0,1,11.32-11.32l24,24a8,8,0,0,1,0,11.32l-24,24a8,8,0,0,1-11.32-11.32L204.69,72H96a56.06,56.06,0,0,0-56,56,8,8,0,0,1-16,0Zm200-8a8,8,0,0,0-8,8,56.06,56.06,0,0,1-56,56H51.31l10.35-10.34a8,8,0,0,0-11.32-11.32l-24,24a8,8,0,0,0,0,11.32l24,24a8,8,0,0,0,11.32-11.32L51.31,200H160a72.08,72.08,0,0,0,72-72A8,8,0,0,0,224,120Z"></path></g></svg>,
       active: false
     },
-    { 
+    {
       name: '& More...',
       icon: null,
       active: true
@@ -39,6 +39,7 @@ const CourseCard = () => {
   ];
 
   return (
+
     <div className="border border-gray-800 rounded-3xl p-6 flex flex-col lg:h-[320px] bg-gray-950/50 justify-between">
       <div>
         <h3 className="text-2xl font-medium text-white">The Course</h3>
@@ -55,14 +56,14 @@ const CourseCard = () => {
           <p className="text-xs mt-2 text-white">Step-by-Step Modules</p>
         </div>
         <div className="w-1/2 h-full flex flex-col justify-between p-[5px] border border-gray-800 rounded-[5px]">
-            {features.map((feature, index) => (
-                <div key={index} className={`border border-gray-800 rounded-md flex items-center p-1 gap-3 ${feature.active ? 'bg-white/5' : ''}`}>
-                    <div className="flex-shrink-0 w-4 h-4 flex items-center justify-center">
-                      {feature.icon && React.cloneElement(feature.icon, { className: `w-5 h-5 ${feature.active ? 'text-white' : 'text-white/75'}`})}
-                    </div>
-                    <p className={`text-xs font-medium ${feature.active ? 'text-white' : 'text-white/75'}`}>{feature.name}</p>
-                </div>
-            ))}
+          {features.map((feature, index) => (
+            <div key={index} className={`border border-gray-800 rounded-md flex items-center p-1 gap-3 ${feature.active ? 'bg-white/5' : ''}`}>
+              <div className="flex-shrink-0 w-4 h-4 flex items-center justify-center">
+                {feature.icon && React.cloneElement(feature.icon, { className: `w-5 h-5 ${feature.active ? 'text-white' : 'text-white/75'}` })}
+              </div>
+              <p className={`text-xs font-medium ${feature.active ? 'text-white' : 'text-white/75'}`}>{feature.name}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
@@ -81,18 +82,18 @@ const ResourceVaultCard = () => (
         <div className="w-16 h-16 border border-gray-800 rounded-lg bg-gray-950/80 backdrop-blur-sm flex items-center justify-center">
           <div className="w-10 h-10 relative flex justify-center items-center" style={{ filter: 'blur(1px)' }}>
             <div
-                className="absolute w-full h-full rounded-full animate-rotate-left"
-                style={{
-                    background: 'linear-gradient(141deg, rgb(178, 239, 67) 13%, rgba(178, 239, 67, 0) 35.0236%, rgba(164, 92, 219, 0) 64.1724%, rgb(178, 239, 67) 88%)',
-                    willChange: 'transform',
-                }}
+              className="absolute w-full h-full rounded-full animate-rotate-left"
+              style={{
+                background: 'linear-gradient(141deg, rgb(178, 239, 67) 13%, rgba(178, 239, 67, 0) 35.0236%, rgba(164, 92, 219, 0) 64.1724%, rgb(178, 239, 67) 88%)',
+                willChange: 'transform',
+              }}
             />
             <div
-                className="absolute w-6 h-6 rounded-full animate-rotate-right"
-                style={{
-                    background: 'linear-gradient(141deg, rgb(178, 239, 67) 13%, rgba(178, 239, 67, 0) 35.0236%, rgba(178, 239, 67, 0) 64.1724%, rgb(178, 239, 67) 88%)',
-                    willChange: 'transform',
-                }}
+              className="absolute w-6 h-6 rounded-full animate-rotate-right"
+              style={{
+                background: 'linear-gradient(141deg, rgb(178, 239, 67) 13%, rgba(178, 239, 67, 0) 35.0236%, rgba(178, 239, 67, 0) 64.1724%, rgb(178, 239, 67) 88%)',
+                willChange: 'transform',
+              }}
             />
           </div>
         </div>
@@ -239,32 +240,32 @@ const CommunityCard = () => (
             </div>
           </div>
           <div className="relative border border-[#222] bg-white/5 rounded w-8 h-8 flex items-center justify-center">
-             <div className="animate-jump">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="rgb(178, 239, 67)" className="w-4 h-4"><g><path d="M208.49,120.49a12,12,0,0,1-17,0L140,69V216a12,12,0,0,1-24,0V69L64.49,120.49a12,12,0,0,1-17-17l72-72a12,12,0,0,1,17,0l72,72A12,12,0,0,1,208.49,120.49Z"></path></g></svg>
-             </div>
+            <div className="animate-jump">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="rgb(178, 239, 67)" className="w-4 h-4"><g><path d="M208.49,120.49a12,12,0,0,1-17,0L140,69V216a12,12,0,0,1-24,0V69L64.49,120.49a12,12,0,0,1-17-17l72-72a12,12,0,0,1,17,0l72,72A12,12,0,0,1,208.49,120.49Z"></path></g></svg>
+            </div>
           </div>
         </div>
 
         {/* Sales system */}
         <div className="flex items-center justify-between p-2 border border-[#222] rounded bg-white/5">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 flex items-center justify-center bg-white/5 rounded">
-                <div className="w-4 h-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" className="text-white w-full h-full">
-                        <g><path d="M230.6,49.53A15.81,15.81,0,0,0,216,40H40A16,16,0,0,0,28.19,66.76l.08.09L96,139.17V216a16,16,0,0,0,24.87,13.32l32-21.34A16,16,0,0,0,160,194.66V139.17l67.74-72.32.08-.09A15.8,15.8,0,0,0,230.6,49.53ZM40,56h0Zm106.18,74.58A8,8,0,0,0,144,136v58.66L112,216V136a8,8,0,0,0-2.16-5.47L40,56H216Z"></path></g>
-                    </svg>
-                </div>
-              </div>
-              <div>
-                <p className="font-medium text-xs text-white">Sales system</p>
-                <p className="text-[10px] text-white/75">Up to date</p>
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 flex items-center justify-center bg-white/5 rounded">
+              <div className="w-4 h-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" className="text-white w-full h-full">
+                  <g><path d="M230.6,49.53A15.81,15.81,0,0,0,216,40H40A16,16,0,0,0,28.19,66.76l.08.09L96,139.17V216a16,16,0,0,0,24.87,13.32l32-21.34A16,16,0,0,0,160,194.66V139.17l67.74-72.32.08-.09A15.8,15.8,0,0,0,230.6,49.53ZM40,56h0Zm106.18,74.58A8,8,0,0,0,144,136v58.66L112,216V136a8,8,0,0,0-2.16-5.47L40,56H216Z"></path></g>
+                </svg>
               </div>
             </div>
-            <div className="relative">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="rgb(178, 239, 67)" className="w-6 h-6">
-                <g><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path></g>
-              </svg>
+            <div>
+              <p className="font-medium text-xs text-white">Sales system</p>
+              <p className="text-[10px] text-white/75">Up to date</p>
             </div>
+          </div>
+          <div className="relative">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="rgb(178, 239, 67)" className="w-6 h-6">
+              <g><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path></g>
+            </svg>
+          </div>
         </div>
       </div>
     </div>
@@ -339,6 +340,9 @@ const BottomGrid: React.FC = () => {
                 }
             `}</style>
       <div className="container mx-auto max-w-4xl px-4 sm:px-6 md:px-8">
+        <h1 className="text-2xl tracking-tight text-center mb-12 text-gray-50 sm:text-4xl">
+          السلاح السري الذي يجعل EV سهلاً بشكل خطير…
+        </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <CourseCard />
           <ResourceVaultCard />

@@ -45,12 +45,9 @@ const features: Array<{
     },
 ];
 
-// FIX: Changed Card component to be defined as a React.FC.
-// This helps TypeScript's type inference correctly handle special React props like 'key'
-// and resolves incorrect 'property does not exist' errors at the call site.
 const Card: React.FC<{ title: string; description: string; icon: React.ReactNode }> = ({ title, description, icon }) => {
     return (
-        <div className="flex h-full flex-col items-start justify-start rounded-3xl border border-gray-800/50 bg-gray-950/50 p-7 text-start shadow-2xl shadow-blue-500/10 backdrop-blur-md">
+        <div className="flex h-full flex-col items-start justify-start rounded-3xl border border-gray-800/50 bg-[#426135]/50 p-7 text-start shadow-2xl shadow-blue-500/10 backdrop-blur-md">
             <div className="mb-8 flex size-16 items-center justify-center rounded-xl bg-gray-900 p-4">{icon}</div>
             <h3 className="mb-2 text-xl font-bold text-white">{title}</h3>
             <p className="text-gray-400">{description}</p>
@@ -60,7 +57,7 @@ const Card: React.FC<{ title: string; description: string; icon: React.ReactNode
 
 const Cards = () => {
     return (
-        <div className="flex flex-col place-content-center place-items-center items-center justify-center gap-4 py-10 md:grid md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {features.map((feature, index) => (
                 <Card key={index} title={feature.title} description={feature.description} icon={feature.icon} />
             ))}
@@ -70,64 +67,29 @@ const Cards = () => {
 
 const TheOldWay: React.FC = () => {
     return (
-        <div dir="rtl" className="mt-10 flex w-full flex-col items-center justify-between">
+        <div dir="rtl" className="mt-5 flex w-full flex-col items-center justify-between">
             <div className="relative z-0 flex h-auto w-full flex-col items-center justify-center">
                 <div className="relative isolate">
-                    <div
-                        className='container relative mx-auto mt-10 w-full max-w-7xl rounded-3xl px-4 sm:mb-10 sm:px-6 md:px-8'
-                    >
-                        <div className="mb-8 flex justify-center">
-                            <div className="relative inline-block bg-gradient-to-r from-blue-600 to-indigo-400 bg-clip-text text-sm font-bold uppercase leading-6 text-transparent">
-                                الطريقة القديمة
-                            </div>
-                        </div>
-                        <div className="text-center">
-                            <h1 className="text-2xl font-bold tracking-tight text-gray-50 sm:text-4xl">
-                                نموذج الدفع عند الاستلام الحالي{' '}
-                                <span className='font-bold tracking-widest'>متعثر</span>.
-                            </h1>
-                            <p className="mt-6 text-base leading-8 text-gray-600">
-                                قل وداعاً للتكاليف المرتفعة والأسواق المزدحمة
+                    <div className={'container relative mx-auto my-4 w-full max-w-7xl rounded-3xl px-4 sm:my-10 sm:px-6 md:px-8'}>
+                        <div className="mb-12 text-center">
+                            <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">
+                               الطريقة القديمة لم تعد تعمل
+                            </h2>
+                            <p className="mx-auto mt-4 max-w-3xl text-lg text-gray-300">
+                                كان بناء علامة تجارية في التجارة الإلكترونية واضحًا ومباشرًا. الآن، أصبحت نفس الاستراتيجيات القديمة مكتظة ومكلفة وغير فعالة.
                             </p>
                         </div>
-
                         <Cards />
                     </div>
-
                     <div className="absolute inset-0 -z-10 h-full w-full">
                         <SparklesCore
-                            id="tsparticlesoldway"
+                            id="tsparticlestheoldway"
                             background="transparent"
                             minSize={0.6}
                             maxSize={1.4}
                             particleDensity={4}
                             className="h-full w-full"
                             particleColor="#FFFFFF"
-                        />
-                    </div>
-
-                    <div
-                        className="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
-                        aria-hidden="true"
-                    >
-                        <div
-                            className="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-indigo-500 to-blue-500 opacity-30"
-                            style={{
-                                clipPath:
-                                    'polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)',
-                            }}
-                        />
-                    </div>
-                    <div
-                        className="absolute left-[max(45rem,calc(50%+8rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
-                        aria-hidden="true"
-                    >
-                        <div
-                            className="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-indigo-500 to-blue-500 opacity-30"
-                            style={{
-                                clipPath:
-                                    'polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)',
-                            }}
                         />
                     </div>
                 </div>
