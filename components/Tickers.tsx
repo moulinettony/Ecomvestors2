@@ -112,7 +112,7 @@ const Tickers: React.FC = () => {
 
                 .animate-marquee-vertical {
                     animation: marquee-vertical linear infinite;
-                    animation-duration: var(--duration);
+                    animation-duration: 20s;
                 }
 
                 .marquee-reverse {

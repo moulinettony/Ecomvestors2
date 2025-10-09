@@ -135,7 +135,7 @@ const HeroSection: React.FC = () => {
                     >
                         <div className="mt-2 flex justify-center px-4 sm:mb-8">
                             <img
-                                src={'/new-logo.png'}
+                                src={'https://i.ibb.co/svx9GP8b/new-logo.png'}
                                 height={75}
                                 width={75}
                                 alt={'Logo'}
@@ -146,19 +146,19 @@ const HeroSection: React.FC = () => {
                                 تقديم النسخة 4.0 من برنامج إيكومفيستورز
                             </div>
                         </div>
-                        <div className="text-center">
-                            <p className="text-center text-sm tracking-normal text-gray-300 lg:pb-6 lg:text-2xl lg:leading-10">
+                        <div className="text-right">
+                            <p className="text-sm tracking-normal text-gray-300 lg:pb-6 lg:text-2xl lg:leading-10">
                                 إليك خطة محكمة لتحقيق دخل يتراوح بين 20,000€ إلى 50,000€ شهريًا أو أكثر، من خلال التجارة{' '}
                                 <br className="max-lg:hidden" /> الإلكترونية في أوروبا الشرقية
                             </p>
-                            <p className="text-center text-sm tracking-normal text-gray-300 lg:text-xl lg:leading-10">
+                            <p className="text-sm tracking-normal text-gray-300 lg:text-xl lg:leading-10">
                                 أكثر من 800 عضو • أكثر من 650 منتج رابح •{' '}
                                 <span className="relative inline-block bg-gradient-to-r from-green-500 to-green-800 bg-clip-text uppercase tracking-normal text-transparent">
                                     {' '}
                                     متوسط دخل 20,000€ شهريًا{' '}
                                 </span>
                             </p>
-                            <p className="text-center text-sm tracking-normal text-gray-400 lg:text-xl lg:leading-10">
+                            <p className="text-sm tracking-normal text-gray-400 lg:text-xl lg:leading-10">
                                 <span className="relative inline-block bg-gradient-to-r from-green-500 to-green-800 bg-clip-text uppercase tracking-normal text-transparent">
                                     الخطوة الأولى:
                                 </span>{' '}
@@ -309,7 +309,7 @@ const HeroSection: React.FC = () => {
                                 <div className="flex w-full flex-row items-center justify-center">
                                     <AnimatedTooltip items={people} />
                                 </div>
-                                <p className="max-w-md text-xs tracking-widest text-gray-400 md:text-sm">
+                                <p className="max-w-md text-center text-xs tracking-widest text-gray-400 md:text-sm">
                                     يسعدنا أن نرحب بك في مجتمع رواد الأعمال المغربي الذين يحدثون ثورة في نماذج أعمال
                                     الدفع عند الاستلام في أوروبا.
                                 </p>
