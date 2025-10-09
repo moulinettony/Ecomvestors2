@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 
 const WhosMe: React.FC = () => {
@@ -7,7 +8,7 @@ const WhosMe: React.FC = () => {
             <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-4 sm:px-6 md:px-8 lg:grid-cols-2">
                 <div role="display" className="relative flex h-auto w-full flex-col items-center justify-center">
                     <img
-                        src="https://www.ecomvestors.com/_next/image?url=%2Fassets%2Fimages%2Faassim.jpg&w=1920&q=75"
+                        src="https://www.ecomvestors.com/assets/images/aassim.jpg"
                         alt="Aassim El Kihel"
                         className="aspect-square size-full rounded-3xl object-cover"
                     />

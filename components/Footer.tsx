@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
             <div className="flex size-auto flex-1 flex-col items-center justify-start gap-10 md:flex-row">
                 <a className="flex size-auto items-center justify-start bg-none" href={'/'}>
                     <img
-                        src={'https://www.ecomvestors.com/_next/image?url=%2Flogos%2Flogo-dark.png&w=256&q=100'}
+                        src={'https://www.ecomvestors.com/logos/logo-dark.png'}
                         height={24}
                         width={150}
                         alt={'Logo'}

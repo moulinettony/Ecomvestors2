@@ -2,55 +2,55 @@ import React from 'react';
 import AnimatedTooltip from './ui/AnimatedTooltip';
 
 const people = [
-  {
-    id: 1,
-    name: '',
-    designation: '',
-    image: 'https://i.pravatar.cc/150?u=1',
-    showTooltip: false,
-  },
-  {
-    id: 2,
-    name: '',
-    designation: '',
-    image: 'https://i.pravatar.cc/150?u=2',
-    showTooltip: false,
-  },
-  {
-    id: 3,
-    name: '',
-    designation: '',
-    image: 'https://i.pravatar.cc/150?u=3',
-    showTooltip: false,
-  },
-  {
-    id: 4,
-    name: '',
-    designation: '',
-    image: 'https://i.pravatar.cc/150?u=4',
-    showTooltip: false,
-  },
-  {
-    id: 5,
-    name: '',
-    designation: '',
-    image: 'https://i.pravatar.cc/150?u=5',
-    showTooltip: false,
-  },
-  {
-    id: 6,
-    name: '',
-    designation: '',
-    image: 'https://i.pravatar.cc/150?u=6',
-    showTooltip: false,
-  },
-  {
-    id: 7,
-    name: 'أنت',
-    designation: 'انضم إلينا',
-    image: 'https://i.pravatar.cc/150?u=7',
-    showTooltip: true,
-  },
+    {
+        id: 1,
+        name: '',
+        designation: '',
+        image: 'https://www.ecomvestors.com/assets/avatars/1.png',
+        showTooltip: false,
+    },
+    {
+        id: 2,
+        name: '',
+        designation: '',
+        image: 'https://www.ecomvestors.com/assets/avatars/2.png',
+        showTooltip: false,
+    },
+    {
+        id: 3,
+        name: '',
+        designation: '',
+        image: 'https://www.ecomvestors.com/assets/avatars/3.png',
+        showTooltip: false,
+    },
+    {
+        id: 4,
+        name: '',
+        designation: '',
+        image: 'https://www.ecomvestors.com/assets/avatars/4.png',
+        showTooltip: false,
+    },
+    {
+        id: 5,
+        name: '',
+        designation: '',
+        image: 'https://www.ecomvestors.com/assets/avatars/5.png',
+        showTooltip: false,
+    },
+    {
+        id: 6,
+        name: '',
+        designation: '',
+        image: 'https://www.ecomvestors.com/assets/avatars/6.png',
+        showTooltip: false,
+    },
+    {
+        id: 7,
+        name: 'أنت',
+        designation: 'انضم إلينا',
+        image: 'https://www.ecomvestors.com/assets/avatars/you1.png',
+        showTooltip: true,
+    },
 ];
 
 const Question: React.FC = () => {

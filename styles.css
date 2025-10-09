@@ -1,10 +1,3 @@
-@font-face {
-    font-family: 'CustomFont';
-    src: url('/fonts/CustomFont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 :root {
     /* Colors chosen to match the application's theme */
     --color-crusta-500: #4f46e5; /* Tailwind indigo-600 */
@@ -31,7 +24,7 @@
     color: #fff;
     cursor: pointer;
     display: inline-flex;
-    font-family: 'CustomFont', monospace;
+    font-family: 'Cairo', sans-serif;
     height: 48px;
     justify-content: center;
     line-height: 1;

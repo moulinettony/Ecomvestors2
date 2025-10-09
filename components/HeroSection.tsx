@@ -8,49 +8,49 @@ const people = [
         id: 1,
         name: '',
         designation: '',
-        image: 'https://i.pravatar.cc/150?u=1',
+        image: 'https://www.ecomvestors.com/assets/avatars/1.png',
         showTooltip: false,
     },
     {
         id: 2,
         name: '',
         designation: '',
-        image: 'https://i.pravatar.cc/150?u=2',
+        image: 'https://www.ecomvestors.com/assets/avatars/2.png',
         showTooltip: false,
     },
     {
         id: 3,
         name: '',
         designation: '',
-        image: 'https://i.pravatar.cc/150?u=3',
+        image: 'https://www.ecomvestors.com/assets/avatars/3.png',
         showTooltip: false,
     },
     {
         id: 4,
         name: '',
         designation: '',
-        image: 'https://i.pravatar.cc/150?u=4',
+        image: 'https://www.ecomvestors.com/assets/avatars/4.png',
         showTooltip: false,
     },
     {
         id: 5,
         name: '',
         designation: '',
-        image: 'https://i.pravatar.cc/150?u=5',
+        image: 'https://www.ecomvestors.com/assets/avatars/5.png',
         showTooltip: false,
     },
     {
         id: 6,
         name: '',
         designation: '',
-        image: 'https://i.pravatar.cc/150?u=6',
+        image: 'https://www.ecomvestors.com/assets/avatars/6.png',
         showTooltip: false,
     },
     {
         id: 7,
         name: 'أنت',
         designation: 'انضم إلينا',
-        image: 'https://i.pravatar.cc/150?u=7',
+        image: 'https://www.ecomvestors.com/assets/avatars/you1.png',
         showTooltip: true,
     },
 ];
@@ -65,7 +65,7 @@ const HeroSection: React.FC = () => {
                     >
                         <div className="mt-2 flex justify-center px-4 sm:mb-8">
                             <img
-                                src={'https://www.ecomvestors.com/_next/image?url=%2Flogos%2Fnew-logo.png&w=256&q=100'}
+                                src={'https://www.ecomvestors.com/logos/new-logo.png'}
                                 height={50}
                                 width={200}
                                 alt={'Logo'}
@@ -77,18 +77,18 @@ const HeroSection: React.FC = () => {
                             </div>
                         </div>
                         <div className="text-center">
-                            <p className="text-right text-sm tracking-normal text-gray-300 lg:pb-6 lg:text-2xl lg:leading-10">
+                            <p className="text-center text-sm tracking-normal text-gray-300 lg:pb-6 lg:text-2xl lg:leading-10">
                                 إليك خطة محكمة لتحقيق دخل يتراوح بين 20,000€ إلى 50,000€ شهريًا أو أكثر، من خلال التجارة{' '}
                                 <br className="max-lg:hidden" /> الإلكترونية في أوروبا الشرقية
                             </p>
-                            <p className="text-right text-sm tracking-normal text-gray-300 lg:text-xl lg:leading-10">
+                            <p className="text-center text-sm tracking-normal text-gray-300 lg:text-xl lg:leading-10">
                                 أكثر من 800 عضو • أكثر من 650 منتج رابح •{' '}
                                 <span className="relative inline-block bg-gradient-to-r from-green-500 to-green-800 bg-clip-text uppercase tracking-normal text-transparent">
                                     {' '}
                                     متوسط دخل 20,000€ شهريًا{' '}
                                 </span>
                             </p>
-                            <p className="text-right text-sm tracking-normal text-gray-400 lg:text-xl lg:leading-10">
+                            <p className="text-center text-sm tracking-normal text-gray-400 lg:text-xl lg:leading-10">
                                 <span className="relative inline-block bg-gradient-to-r from-green-500 to-green-800 bg-clip-text uppercase tracking-normal text-transparent">
                                     الخطوة الأولى:
                                 </span>{' '}
@@ -98,16 +98,17 @@ const HeroSection: React.FC = () => {
                                     سجّل الآن ↓
                                 </span>
                             </p>
-                            <div className="aspect-w-16 aspect-h-9 mx-auto max-w-[900px] py-8">
-                                <video
-                                    className="overflow-hidden rounded-none bg-black py-4  shadow-lg md:rounded-[50px] w-full h-full"
-                                    src="https://www.w3schools.com/html/mov_bbb.mp4"
-                                    style={{ objectFit: 'cover', border: 'none' }}
-                                    controls
-                                    autoPlay
-                                    muted
-                                    loop
-                                />
+                            <div className="mx-auto max-w-[900px] py-8">
+                                <div className="wistia_responsive_padding shadow-lg md:rounded-[50px] overflow-hidden" style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
+                                    <div className="wistia_responsive_wrapper" style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}>
+                                        <div
+                                            className="wistia_embed wistia_async_jgb3pqs49i videoFoam=true"
+                                            style={{ height: '100%', position: 'relative', width: '100%' }}
+                                        >
+                                            &nbsp;
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <p className="text-sm tracking-normal text-gray-200 max-lg:px-4 lg:text-xl lg:leading-10">
                                 اكتشف كيفية بناء عمل تجارة إلكترونية حقيقي بتكلفة منخفضة، تحت إشراف مبتكري نموذج EV.
@@ -127,7 +128,7 @@ const HeroSection: React.FC = () => {
                             <div className=" mx-4 mt-6 hidden flex-col items-center justify-center gap-3 sm:gap-4 lg:mx-8 lg:mt-12  lg:flex lg:flex-row lg:gap-5">
                                 <img
                                     className="pb-4 lg:pb-6 "
-                                    src={'https://www.ecomvestors.com/_next/image?url=%2Fassets%2Freadytostart.png&w=256&q=75'}
+                                    src={'https://www.ecomvestors.com/assets/readytostart.png'}
                                     width={170}
                                     height={10}
                                     alt={'Ready to start'}
@@ -152,7 +153,7 @@ const HeroSection: React.FC = () => {
 
                                 <img
                                     className="pt-4 lg:pb-6 lg:pt-0"
-                                    src={'https://www.ecomvestors.com/_next/image?url=%2Fassets%2Fneedmoreinfo.png&w=256&q=75'}
+                                    src={'https://www.ecomvestors.com/assets/needmoreinfo.png'}
                                     width={170}
                                     height={10}
                                     alt={'Need more info'}
@@ -163,7 +164,7 @@ const HeroSection: React.FC = () => {
                             <div className="relative  mt-6 flex flex-row items-center justify-center gap-[1px] lg:hidden">
                                 <img
                                     className="ml-1 pt-8"
-                                    src={'https://www.ecomvestors.com/_next/image?url=%2Fassets%2Freadytostart.png&w=96&q=75'}
+                                    src={'https://www.ecomvestors.com/assets/readytostart.png'}
                                     width={90}
                                     height={10}
                                     alt={'Ready to start'}
@@ -194,7 +195,7 @@ const HeroSection: React.FC = () => {
 
                                 <img
                                     className="pb-14"
-                                    src={'https://www.ecomvestors.com/_next/image?url=%2Fassets%2Fneedmoreinfo.png&w=96&q=75'}
+                                    src={'https://www.ecomvestors.com/assets/needmoreinfo.png'}
                                     width={90}
                                     height={10}
                                     alt={'Need more info'}

@@ -10,13 +10,13 @@ const features: Array<{
         title: 'أحدث الطرق والهياكل',
         description:
             'كعضو في برنامج EV، ستحصل على وصول حصري إلى أكثر من 35 تحديث فيديو حول طرق وهياكل الدفع عند الاستلام. كن على اطلاع بأحدث المعلومات وتعلم الهياكل اللازمة لتأسيس عملك بنجاح.',
-        image: 'https://www.ecomvestors.com/_next/image?url=%2Fassets%2Fimages%2Fimage-1.png&w=2048&q=75',
+        image: 'https://www.ecomvestors.com/assets/images/image-1.png',
     },
     {
         title: 'تدريب فردي يومي',
         description:
             'في برنامج EV، نعمل جنبًا إلى جنب مع المدربين وفريقك لمساعدتك في تأسيس نموذج عملك للدفع عند الاستلام. من خلال التواصل اليومي وجلسات التدريب الفردي على قناة Slac الخاصة بك، نقدم لك أسهل طريقة للتعلم من خلال الممارسة.',
-        image: 'https://www.ecomvestors.com/_next/image?url=%2Fassets%2Fimages%2Fimage-2.png&w=1080&q=75',
+        image: 'https://www.ecomvestors.com/assets/images/image-2.png',
     },
 ];
 
