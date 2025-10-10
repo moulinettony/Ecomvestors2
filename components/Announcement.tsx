@@ -18,7 +18,7 @@ const Announcement: React.FC = () => {
                     <svg viewBox="0 0 2 2" className="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true">
                         <circle cx={1} cy={1} r={1} />
                     </svg>
-                    أذكى طريقة لبناء عمل تجاري عبر الإنترنت يحقق 10,000 دولار - 50,000 دولار شهريًا في عام 2024
+                    أذكى طريقة لبناء عمل تجاري عبر الإنترنت يحقق 10,000 دولار - 50,000 دولار شهريًا في عام 2025
                 </p>
                 <a
                     href="#form"

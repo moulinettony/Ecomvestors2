@@ -48,7 +48,7 @@ const features: Array<{
 const Card: React.FC<{ title: string; description: string; icon: React.ReactNode }> = ({ title, description, icon }) => {
     return (
         <div className="flex h-full flex-col items-start justify-start rounded-3xl border border-gray-800/50 bg-[#0d110961] /50 p-7 text-start shadow-2xl shadow-green-500/10 backdrop-blur-md">
-            <div className="mb-8 flex size-16 items-center justify-center rounded-xl bg-[#1d9248] p-4">{icon}</div>
+            <div className="mb-8 flex size-16 items-center justify-center rounded-xl bg-[#1d924840] p-4">{icon}</div>
             <h3 className="mb-2 text-xl font-bold text-white">{title}</h3>
             <p className="text-gray-400">{description}</p>
         </div>

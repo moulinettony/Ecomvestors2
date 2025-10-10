@@ -1,38 +1,34 @@
-
-
-
-
 import React from 'react';
 
 const CourseCard = () => {
   const features = [
     {
-      name: 'System check',
+      name: 'فحص النظام',
       icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><g><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.27,47,25.53a8,8,0,0,0,4.2,0c1-.26,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0Z"></path></g></svg>,
       active: true
     },
     {
-      name: 'Research',
+      name: 'بحث',
       icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><g><path d="M152,96H104a8,8,0,0,0-8,8v48a8,8,0,0,0,8,8h48a8,8,0,0,0,8-8V104A8,8,0,0,0,152,96Zm-8,48H112V112h32Zm88,0H216V112h16a8,8,0,0,0,0-16H216V56a16,16,0,0,0-16-16H160V24a8,8,0,0,0-16,0V40H112V24a8,8,0,0,0-16,0V40H56A16,16,0,0,0,40,56V96H24a8,8,0,0,0,0-16H40v32H24a8,8,0,0,0,0,16H40v40a16,16,0,0,0,16,16H96v16a8,8,0,0,0,16,0V216h32v16a8,8,0,0,0,16,0V216h40a16,16,0,0,0,16-16V160h16a8,8,0,0,0,0-16Zm-32,56H56V56H200v95.87s0,.09,0,.13,0,.09,0,.13V200Z"></path></g></svg>,
       active: false
     },
     {
-      name: 'Meta',
+      name: 'ميتا',
       icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><g><path d="M114.34,154.34l96-96a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32ZM128,88a63.9,63.9,0,0,1,20.44,3.33,8,8,0,1,0,5.11-15.16A80,80,0,0,0,48.49,160.88,8,8,0,0,0,56.43,168c.29,0,.59,0,.89-.05a8,8,0,0,0,7.07-8.83A64.92,64.92,0,0,1,64,152,64.07,64.07,0,0,1,128,88Zm99.74,13a8,8,0,0,0-14.24,7.3,96.27,96.27,0,0,1,5,75.71l-181.1-.07A96.24,96.24,0,0,1,128,56h.88a95,95,0,0,1,42.82,10.5A8,8,0,1,0,179,52.27a112,112,0,0,0-156.66,137A16.07,16.07,0,0,0,37.46,200H218.53a16,16,0,0,0,15.11-10.71,112.35,112.35,0,0,0-5.9-88.3Z"></path></g></svg>,
       active: false
     },
     {
-      name: 'Strategies',
+      name: 'استراتيجيات',
       icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><g><path d="M168,104H88a40,40,0,0,0-40,40v8a40,40,0,0,0,40,40h80a40,40,0,0,0,40-40v-8A40,40,0,0,0,168,104Zm24,48a24,24,0,0,1-24,24H88a24,24,0,0,1-24-24v-8a24,24,0,0,1,24-24h80a24,24,0,0,1,24,24ZM208,40a32.06,32.06,0,0,0-31,24H79a32,32,0,0,0-63,8v80a72.08,72.08,0,0,0,72,72h80a72.08,72.08,0,0,0,72-72V72A32,32,0,0,0,208,40Zm16,112a56.06,56.06,0,0,1-56,56H88a56.06,56.06,0,0,1-56-56V72a16,16,0,0,1,32,0,8,8,0,0,0,8,8H184a8,8,0,0,0,8-8,16,16,0,0,1,32,0Zm-120-4a12,12,0,1,1-12-12A12,12,0,0,1,104,148Zm72,0a12,12,0,1,1-12-12A12,12,0,0,1,176,148Z"></path></g></svg>,
       active: false
     },
     {
-      name: 'Creatives',
+      name: 'إعلانات إبداعية',
       icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><g><path d="M24,128A72.08,72.08,0,0,1,96,56H204.69L194.34,45.66a8,8,0,0,1,11.32-11.32l24,24a8,8,0,0,1,0,11.32l-24,24a8,8,0,0,1-11.32-11.32L204.69,72H96a56.06,56.06,0,0,0-56,56,8,8,0,0,1-16,0Zm200-8a8,8,0,0,0-8,8,56.06,56.06,0,0,1-56,56H51.31l10.35-10.34a8,8,0,0,0-11.32-11.32l-24,24a8,8,0,0,0,0,11.32l24,24a8,8,0,0,0,11.32-11.32L51.31,200H160a72.08,72.08,0,0,0,72-72A8,8,0,0,0,224,120Z"></path></g></svg>,
       active: false
     },
     {
-      name: '& More...',
+      name: 'والمزيد...',
       icon: null,
       active: true
     },
@@ -42,8 +38,8 @@ const CourseCard = () => {
 
     <div className="border border-gray-800 rounded-3xl p-6 flex flex-col lg:h-[320px] bg-[#0d110961]  /50 justify-between">
       <div>
-        <h3 className="text-2xl font-medium text-white">The Course</h3>
-        <p className="text-white/75 mt-2 leading-snug">Step-by-step strategy, tactics, and templates to build, launch, and scale a real brand.</p>
+        <h3 className="text-2xl font-medium text-white">الدورة التدريبية</h3>
+        <p className="text-white/75 mt-2 leading-snug">استراتيجية وخطط وقوالب خطوة بخطوة لبناء وإطلاق وتوسيع علامة تجارية حقيقية.</p>
       </div>
       <div className="flex-grow flex items-center justify-center gap-4 mt-4">
         <div className="w-1/2 h-full flex flex-col items-center justify-center border border-gray-800 rounded-2xl p-4">
@@ -53,7 +49,7 @@ const CourseCard = () => {
             <div className="absolute inset-5 border border-purple-500/10 rounded-full"></div>
             <div className="absolute inset-0 animate-radar-scan rounded-full" style={{ background: 'conic-gradient(rgba(45, 143, 161, 0) 315deg, rgba(178, 239, 67, 0.15) 331deg, rgba(178, 239, 67, 0.6) 360deg)' }}></div>
           </div>
-          <p className="text-xs mt-2 text-white">Step-by-Step Modules</p>
+          <p className="text-xs mt-2 text-white">وحدات خطوة بخطوة</p>
         </div>
         <div className="w-1/2 h-full flex flex-col justify-between p-[5px] border border-gray-800 rounded-[5px]">
           {features.map((feature, index) => (
@@ -73,31 +69,16 @@ const CourseCard = () => {
 const ResourceVaultCard = () => (
   <div className="border border-gray-800 rounded-3xl p-6 flex flex-col lg:h-[320px] bg-[#0d110961]  /50 justify-between">
     <div>
-      <h3 className="text-2xl font-medium text-white">The Resource Vault</h3>
-      <p className="text-white/75 mt-2 leading-snug">Tested funnels, automations, ad templates, email flows, everything we actually use inside our brands.</p>
+      <h3 className="text-2xl font-medium text-white">خزينة الموارد</h3>
+      <p className="text-white/75 mt-2 leading-snug">مسارات مبيعات مجربة، أتمتة، قوالب إعلانية، تدفقات بريد إلكتروني، كل ما نستخدمه بالفعل داخل علاماتنا التجارية.</p>
     </div>
     <div className="flex-grow flex items-center justify-center mt-4 border border-gray-800 rounded-2xl p-4">
-      {/* Our Solution */}
+      {/* Your Sales */}
       <div className="flex flex-col items-center text-center">
         <div className="w-16 h-16 border border-gray-800 rounded-lg bg-[#0d110961]  /80 backdrop-blur-sm flex items-center justify-center">
-          <div className="w-10 h-10 relative flex justify-center items-center" style={{ filter: 'blur(1px)' }}>
-            <div
-              className="absolute w-full h-full rounded-full animate-rotate-left"
-              style={{
-                background: 'linear-gradient(141deg, rgb(178, 239, 67) 13%, rgba(178, 239, 67, 0) 35.0236%, rgba(164, 92, 219, 0) 64.1724%, rgb(178, 239, 67) 88%)',
-                willChange: 'transform',
-              }}
-            />
-            <div
-              className="absolute w-6 h-6 rounded-full animate-rotate-right"
-              style={{
-                background: 'linear-gradient(141deg, rgb(178, 239, 67) 13%, rgba(178, 239, 67, 0) 35.0236%, rgba(178, 239, 67, 0) 64.1724%, rgb(178, 239, 67) 88%)',
-                willChange: 'transform',
-              }}
-            />
-          </div>
+          <img src="https://framerusercontent.com/images/0gGPo0G2Tn7mkfCvISKT1bdH0.png" alt="Shopify" className="" />
         </div>
-        <p className="text-[10px] mt-2 text-white/90">Our Solution</p>
+        <p className="text-[10px] mt-2 text-white/90">مبيعاتك</p>
       </div>
 
       {/* Connecting Lines */}
@@ -131,13 +112,29 @@ const ResourceVaultCard = () => (
         </div>
       </div>
 
-      {/* Your Sales */}
+      {/* Our Solution */}
       <div className="flex flex-col items-center text-center">
         <div className="w-16 h-16 border border-gray-800 rounded-lg bg-[#0d110961]  /80 backdrop-blur-sm flex items-center justify-center">
-          <img src="https://www.edigitalagency.com.au/wp-content/uploads/Shopify-Logo-White.png" alt="Shopify" className="w-10 h-10" />
+          <div className="w-10 h-10 relative flex justify-center items-center" style={{ filter: 'blur(1px)' }}>
+            <div
+              className="absolute w-full h-full rounded-full animate-rotate-left"
+              style={{
+                background: 'linear-gradient(141deg, rgb(178, 239, 67) 13%, rgba(178, 239, 67, 0) 35.0236%, rgba(164, 92, 219, 0) 64.1724%, rgb(178, 239, 67) 88%)',
+                willChange: 'transform',
+              }}
+            />
+            <div
+              className="absolute w-6 h-6 rounded-full animate-rotate-right"
+              style={{
+                background: 'linear-gradient(141deg, rgb(178, 239, 67) 13%, rgba(178, 239, 67, 0) 35.0236%, rgba(178, 239, 67, 0) 64.1724%, rgb(178, 239, 67) 88%)',
+                willChange: 'transform',
+              }}
+            />
+          </div>
         </div>
-        <p className="text-[10px] mt-2 text-white/90">Your Sales</p>
+        <p className="text-[10px] mt-2 text-white/90">حلنا</p>
       </div>
+
     </div>
   </div>
 );
@@ -145,25 +142,25 @@ const ResourceVaultCard = () => (
 
 const AiDevelopmentCard = () => {
   const codeLines = [
-    "// Before AI",
-    "– Spending hours every day scrolling through product research",
-    "– Manually analyzing TikTok ads to spot trends",
-    "– Segmenting customers in Klaviyo based on gut feeling",
-    "– Building content strategies based on what competitors might be doing well",
+    "// قبل الذكاء الاصطناعي",
+    "– قضاء ساعات كل يوم في البحث عن المنتجات",
+    "– تحليل إعلانات تيك توك يدويًا لرصد الاتجاهات",
+    "– تقسيم العملاء في كلافيو بناءً على الحدس",
+    "– بناء استراتيجيات محتوى بناءً على ما قد يفعله المنافسون جيدًا",
     "",
-    "// After AI",
-    "✓ Find winning products in minutes with AI and real-time trends.",
-    "✓ Automatically detecting viral TikTok products",
-    "✓ Klaviyo segmentation fully optimized by AI",
-    "✓ AI generates data-driven content strategies",
-    "✓ AI turns competitor research into minutes of insights",
+    "// بعد الذكاء الاصطناعي",
+    "✓ العثور على منتجات رابحة في دقائق باستخدام الذكاء الاصطناعي.",
+    "✓ اكتشاف منتجات تيك توك الرائجة تلقائيًا",
+    "✓ تقسيم كلافيو محسن بالكامل بواسطة الذكاء الاصطناعي",
+    "✓ يولد الذكاء الاصطناعي استراتيجيات محتوى قائمة على البيانات",
+    "✓ يحول الذكاء الاصطناعي بحث المنافسين إلى دقائق من الرؤى",
   ];
 
   return (
     <div className="border border-gray-800 rounded-3xl p-6 flex flex-col lg:h-[320px] bg-[#0d110961]  /50 justify-between">
       <div>
-        <h3 className="text-2xl font-medium text-white">AI Development</h3>
-        <p className="text-white/75 mt-2 leading-snug">Our team builds intelligent automation systems tailored to your business processes.</p>
+        <h3 className="text-2xl font-medium text-white">تطوير الذكاء الاصطناعي</h3>
+        <p className="text-white/75 mt-2 leading-snug">يقوم فريقنا ببناء أنظمة أتمتة ذكية مصممة خصيصًا لعمليات عملك.</p>
       </div>
       <div className="flex-grow flex flex-col mt-4 border border-gray-800 rounded-2xl overflow-hidden">
         <div className="flex items-center p-2 bg-white/5 border-b border-gray-800">
@@ -180,9 +177,9 @@ const AiDevelopmentCard = () => {
           </div>
           <div className="flex-grow relative overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]">
             <div className="absolute inset-0 animate-code-scroll">
-              <div className="p-4 text-xs text-white/80 whitespace-pre">
+              <div className="p-4 text-xs text-white/80 whitespace-pre text-left" dir="ltr">
                 {[...codeLines, ...codeLines].map((line, index) => (
-                  <p key={index} className={line.startsWith('// After') || line.startsWith('✓') ? 'text-[#b2ef43]' : (line.startsWith('//') ? 'text-gray-400' : '')}>{line}</p>
+                  <p key={index} className={line.startsWith('// بعد') || line.startsWith('✓') ? 'text-[#b2ef43]' : (line.startsWith('//') ? 'text-gray-400' : '')}>{line}</p>
                 ))}
               </div>
             </div>
@@ -197,8 +194,8 @@ const AiDevelopmentCard = () => {
 const CommunityCard = () => (
   <div className="border border-gray-800 rounded-3xl p-6 flex flex-col lg:h-[320px] bg-[#0d110961]  /50 justify-between">
     <div>
-      <h3 className="text-2xl font-medium text-white">The Community</h3>
-      <p className="text-white/75 mt-2 leading-snug">Private group of eCom operators. No influencers. No fake screenshots. Just results.</p>
+      <h3 className="text-2xl font-medium text-white">المجتمع</h3>
+      <p className="text-white/75 mt-2 leading-snug">مجموعة خاصة لمشغلي التجارة الإلكترونية. لا يوجد مؤثرون. لا توجد لقطات شاشة مزيفة. فقط نتائج.</p>
     </div>
     <div className="flex-grow flex flex-col items-center justify-center gap-2 mt-4 border border-gray-800 rounded-2xl p-2">
       <div className="w-full flex flex-col gap-2">
@@ -213,8 +210,8 @@ const CommunityCard = () => (
               </div>
             </div>
             <div>
-              <p className="font-medium text-xs text-white"><strong>Built for builders</strong></p>
-              <p className="text-xs text-white/75">Share strategies, wins, and numbers.</p>
+              <p className="font-medium text-xs text-white"><strong>مصمم للبناة</strong></p>
+              <p className="text-xs text-white/75">شارك الاستراتيجيات والانتصارات والأرقام.</p>
             </div>
           </div>
           <div className="relative animate-spin-slow">
@@ -235,8 +232,8 @@ const CommunityCard = () => (
               </div>
             </div>
             <div>
-              <p className="font-medium text-xs text-white"><strong>Grow together.</strong></p>
-              <p className="text-xs text-white/75">Learn from what’s working <em>now</em>.</p>
+              <p className="font-medium text-xs text-white"><strong>ننمو معًا.</strong></p>
+              <p className="text-xs text-white/75">تعلم مما ينجح <em>الآن</em>.</p>
             </div>
           </div>
           <div className="relative border border-[#222] bg-white/5 rounded w-8 h-8 flex items-center justify-center">
@@ -257,8 +254,8 @@ const CommunityCard = () => (
               </div>
             </div>
             <div>
-              <p className="font-medium text-xs text-white">Sales system</p>
-              <p className="text-[10px] text-white/75">Up to date</p>
+              <p className="font-medium text-xs text-white">نظام المبيعات</p>
+              <p className="text-[10px] text-white/75">محدث</p>
             </div>
           </div>
           <div className="relative">
@@ -275,7 +272,7 @@ const CommunityCard = () => (
 
 const BottomGrid: React.FC = () => {
   return (
-    <section className="py-10 text-white bg-[##181c14]">
+    <section className="py-10 text-white bg-[##181c14]" dir="rtl">
       <style>{`
                 @keyframes radar-scan {
                     from { transform: rotate(0deg); }
@@ -290,7 +287,7 @@ const BottomGrid: React.FC = () => {
                     to { transform: translateY(-50%); }
                 }
                 .animate-code-scroll {
-                    animation: code-scroll 8s linear infinite;
+                    animation: code-scroll 12s linear infinite;
                 }
 
                 @keyframes spin {
@@ -344,10 +341,10 @@ const BottomGrid: React.FC = () => {
           السلاح السري الذي يجعل EV سهلاً بشكل خطير…
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <CourseCard />
           <ResourceVaultCard />
-          <AiDevelopmentCard />
+          <CourseCard />
           <CommunityCard />
+          <AiDevelopmentCard />
         </div>
       </div>
     </section>

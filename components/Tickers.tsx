@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface Testimonial {
@@ -11,51 +12,51 @@ interface Testimonial {
 const column1Data: Testimonial[] = [
     {
         image: 'https://www.ecomvestors.com/assets/testimonials/images/image-1.jpg',
-        quote: 'The best.. quick communication, and fast execution. Next is 20k days.',
+        quote: 'الأفضل.. تواصل سريع وتنفيذ سريع. الهدف التالي هو 20 ألف يوميًا.',
         avatar: 'https://www.ecomvestors.com/assets/avatars/1.png',
         name: 'Ouassim',
-        country: 'Netherlands',
+        country: 'هولندا',
     },
     {
         image: 'https://www.ecomvestors.com/assets/testimonials/images/image-2.jpg',
-        quote: 'Real insights, no other like this.',
+        quote: 'رؤى حقيقية، لا يوجد مثيل لهذا.',
         avatar: 'https://www.ecomvestors.com/assets/avatars/2.png',
         name: 'Chris',
-        country: 'Netherlands',
+        country: 'هولندا',
     },
 ];
 
 const column2Data: Testimonial[] = [
     {
         image: 'https://www.ecomvestors.com/assets/testimonials/images/image-3.jpg',
-        quote: 'Been here now for 2 months, still surprised every time with the support and tips that i receive',
+        quote: 'أنا هنا منذ شهرين، وما زلت أتفاجأ في كل مرة بالدعم والنصائح التي أتلقاها.',
         avatar: 'https://www.ecomvestors.com/assets/avatars/3.png',
         name: 'Louis',
-        country: 'France',
+        country: 'فرنسا',
     },
     {
         image: 'https://www.ecomvestors.com/assets/testimonials/images/image-4.jpg',
-        quote: 'The best.. quick communication, and fast execution. Next is 20k days.',
+        quote: 'الأفضل.. تواصل سريع وتنفيذ سريع. الهدف التالي هو 20 ألف يوميًا.',
         avatar: 'https://www.ecomvestors.com/assets/avatars/4.png',
         name: 'Ouassim',
-        country: 'Netherlands',
+        country: 'هولندا',
     },
 ];
 
 const column3Data: Testimonial[] = [
     {
         image: 'https://www.ecomvestors.com/assets/testimonials/images/image-5.jpg',
-        quote: 'First month of coaching 🫡 never expexted this guys',
+        quote: 'الشهر الأول من التدريب 🫡 لم أتوقع هذا يا رفاق.',
         avatar: 'https://www.ecomvestors.com/assets/avatars/5.png',
         name: 'Josh',
-        country: 'United Kingdom',
+        country: 'المملكة المتحدة',
     },
     {
         image: 'https://www.ecomvestors.com/assets/testimonials/images/image-6.jpg',
         quote: '', // Empty quote handled gracefully
         avatar: 'https://www.ecomvestors.com/assets/avatars/6.png',
         name: 'Ben',
-        country: 'Netherlands',
+        country: 'هولندا',
     },
 ];
 
@@ -64,7 +65,7 @@ const column3Data: Testimonial[] = [
 // and resolves incorrect 'property does not exist' errors at the call site.
 const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }) => (
     <li className="w-full flex-shrink-0">
-        <div className="flex h-full items-end flex-col justify-between rounded-3xl bg-[#0d110961]  /50 border border-gray-800/50 backdrop-blur-md p-6 space-y-6">
+        <div className="flex h-full items-end flex-col justify-between rounded-3xl bg-[#0d110961] border border-gray-800/50 backdrop-blur-md p-6 space-y-6">
             <div className="aspect-video w-full overflow-hidden rounded-xl">
                 <img
                     src={testimonial.image}
@@ -73,12 +74,12 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
                 />
             </div>
             {testimonial.quote && (
-                <p className="text-lg font-medium text-white/90 text-left">
+                <p className="text-lg font-medium text-white/90 text-right w-full">
                     {testimonial.quote}
                 </p>
             )}
             <div className="flex items-center gap-4">
-                <div className="text-left">
+                <div className="text-right">
                     <p className="font-medium text-white">{testimonial.name}</p>
                     <p className="text-sm text-gray-400">{testimonial.country}</p>
                 </div>
@@ -103,7 +104,7 @@ const MarqueeColumn = ({ testimonials, reverse = false, duration = "80s" }: { te
 
 const Tickers: React.FC = () => {
     return (
-        <section dir="rtl" className="py-10 sm:py-20 bg-[#0d110961]   overflow-hidden text-center text-white">
+        <section dir="rtl" className="py-10 sm:py-20 overflow-hidden text-center text-white">
              <style>{`
                 @keyframes marquee-vertical {
                     from { transform: translateY(0); }
@@ -124,7 +125,7 @@ const Tickers: React.FC = () => {
                     شهادات حقيقية
                 </a>
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                    لا تأخذ كلمتنا فقط على محمل الجد
+                    هل أنت مستعد تكون الصورة القادمة على هذا الجدار؟
                 </h2>
                 <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto mb-12">
                     استمع مباشرة من أعضائنا الذين يغيرون حياتهم ويحققون نجاحًا لا يصدق مع EcomVestors.

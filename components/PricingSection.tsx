@@ -89,7 +89,7 @@ const PricingSection = () => {
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 24 24"
-                                    fill="#7587f6"
+                                    fill="#11170f"
                                     className="mb-4 h-12 w-12 justify-self-end rounded bg-gradient-to-r from-green-600 to-teal-900 p-3"
                                 >
                                     <path
@@ -101,7 +101,6 @@ const PricingSection = () => {
                                 <h4 className="text-xl font-bold text-white">{plan.name}</h4>
                                 <p className="mt-4 text-5xl font-bold tracking-tight text-white">
                                     ${plan.price}
-                                    <span className="text-xl font-medium text-gray-300">/شهرياً</span>
                                 </p>
 
                                 <ul role="list" className="mt-8 space-y-4 text-gray-300">
