@@ -46,7 +46,7 @@ const plans: Plan[] = [
 ];
 
 const cardStyle: React.CSSProperties = {
-    background: 'radial-gradient(circle at top, #1d4ed840, transparent 40%), rgb(3 7 18 / 0.5)',
+    background: 'radial-gradient(circle at top, #04785740, transparent 40%), rgb(3 7 18 / 0.5)',
     border: '1px solid rgba(255, 255, 255, 0.08)',
 };
 
@@ -55,7 +55,7 @@ const PricingSection = () => {
         <div dir="rtl" className="my-12 px-4 text-white">
             <div className="mx-auto max-w-7xl">
                 <div className="mb-4 flex justify-center">
-                    <div className="relative inline-block bg-gradient-to-r from-blue-600 to-indigo-400 bg-clip-text text-sm font-bold uppercase leading-6 text-transparent">
+                    <div className="relative inline-block bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-sm font-bold uppercase leading-6 text-transparent">
                         خطط الأسعار
                     </div>
                 </div>
@@ -76,11 +76,11 @@ const PricingSection = () => {
                             }`}
                             style={{
                                 ...cardStyle,
-                                border: plan.isPopular ? '1px solid #1d4ed8' : cardStyle.border,
+                                border: plan.isPopular ? '1px solid #047857' : cardStyle.border,
                             }}
                         >
                             {plan.isPopular && (
-                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-900 px-4 py-1 text-xs font-bold uppercase text-white">
+                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-green-600 to-teal-900 px-4 py-1 text-xs font-bold uppercase text-white">
                                     الأكثر رواجاً
                                 </div>
                             )}
@@ -90,7 +90,7 @@ const PricingSection = () => {
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 24 24"
                                     fill="#7587f6"
-                                    className="mb-4 h-12 w-12 justify-self-end rounded bg-gradient-to-r from-blue-600 to-indigo-900 p-3"
+                                    className="mb-4 h-12 w-12 justify-self-end rounded bg-gradient-to-r from-green-600 to-teal-900 p-3"
                                 >
                                     <path
                                         fillRule="evenodd"
@@ -127,7 +127,7 @@ const PricingSection = () => {
 
                             <a
                                 href="#form"
-                                className="mt-6 inline-flex h-11 w-full transform-gpu items-center justify-center gap-2 whitespace-nowrap rounded-full bg-blue-700 px-8 text-sm font-bold text-white shadow-2xl shadow-blue-500/50 ring-offset-background transition-transform duration-200 hover:scale-105 hover:bg-gray-900 hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 active:scale-95 active:bg-blue-950 active:text-blue-500 disabled:pointer-events-none disabled:opacity-50"
+                                className="mt-6 inline-flex h-11 w-full transform-gpu items-center justify-center gap-2 whitespace-nowrap rounded-full bg-green-700 px-8 text-sm font-bold text-white shadow-2xl shadow-green-500/50 ring-offset-background transition-transform duration-200 hover:scale-105 hover:bg-gray-900 hover:text-green-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 active:scale-95 active:bg-green-950 active:text-green-500 disabled:pointer-events-none disabled:opacity-50"
                             >
                                 ابدأ الآن
                             </a>

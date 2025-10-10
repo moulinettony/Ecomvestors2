@@ -42,14 +42,14 @@ const Card: React.FC<{
     image,
 }) => {
     return (
-        <div className="flex h-full flex-col items-start justify-start overflow-hidden rounded-3xl border border-gray-800/50 bg-gray-950/50 p-7 text-start shadow-2xl shadow-blue-500/10 backdrop-blur-md">
+        <div className="flex h-full flex-col items-start justify-start overflow-hidden rounded-3xl border border-gray-800/50 bg-gray-950/50 p-7 text-start shadow-2xl shadow-green-500/10 backdrop-blur-md">
             <h3 className="mb-2 text-xl font-bold text-white">{title}</h3>
             <p className="text-gray-400">{description}</p>
             <div className="-mb-14 mt-8 flex w-full items-center justify-center">
                 <img
                     src={image}
                     alt={title}
-                    className="size-full rounded-xl shadow-2xl shadow-blue-500/10 backdrop-blur-md"
+                    className="size-full rounded-xl shadow-2xl shadow-green-500/10 backdrop-blur-md"
                 />
             </div>
         </div>
@@ -77,7 +77,7 @@ const MasterProgram: React.FC = () => {
                         }
                     >
                         <div className="mb-12 text-center">
-                            <a href="#" className="mb-2 inline-block text-sm font-semibold text-blue-400">
+                            <a href="#" className="mb-2 inline-block text-sm font-semibold text-green-400">
                                 برنامج الماستر
                             </a>
                             <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">

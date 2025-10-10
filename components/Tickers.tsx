@@ -120,7 +120,7 @@ const Tickers: React.FC = () => {
                 }
             `}</style>
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
-                <a href="#" className="text-sm text-blue-400 font-semibold mb-2 inline-block">
+                <a href="#" className="text-sm text-green-400 font-semibold mb-2 inline-block">
                     شهادات حقيقية
                 </a>
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">

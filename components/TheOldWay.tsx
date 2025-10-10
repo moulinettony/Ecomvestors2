@@ -26,28 +26,28 @@ const features: Array<{
     {
         title: 'رسوم الدفع عند الاستلام المرتفعة في أوروبا',
         description: '80% من خدمات الدفع عند الاستلام تعتمد على إعادة البيع دون مستودعات خاصة، مما يؤدي إلى رسوم باهظة تصعّب تحقيق الأرباح.',
-        icon: <MoneyIcon className="h-full w-full aspect-square text-blue-500" />,
+        icon: <MoneyIcon className="h-full w-full aspect-square text-green-500" />,
     },
     {
         title: 'الأسواق الأوروبية المزدحمة',
         description: 'مع ازدحام الأسواق في أوروبا الغربية، نحن نفتح آفاقاً جديدة مع برنامج EV، مستهدفين الفرص الواعدة في أوروبا الشرقية.',
-        icon: <ShoppingCartIcon className="h-full w-full aspect-square text-blue-500" />,
+        icon: <ShoppingCartIcon className="h-full w-full aspect-square text-green-500" />,
     },
     {
         title: ' هل مللت من الطرق التقليدية؟',
         description: 'استعد للسيطرة الكاملة مع فريقك الخاص ومركز اتصالك، وحقق توصيلات بأقل من 4 يورو لكل شحنة، لتجعل العمل مربحاً وممتعاً في آن واحد.',
-        icon: <EmojiSadIcon className="h-full w-full aspect-square text-blue-500" />,
+        icon: <EmojiSadIcon className="h-full w-full aspect-square text-green-500" />,
     },
     {
         title: 'أسرار النجاح في الدفع عند الاستلام',
         description: 'تعرف على ما يجري فعلاً في نموذج أعمال الدفع عند الاستلام واستخدمه لتحقيق النجاح لصالحك.',
-        icon: <KeyIcon className="h-full w-full aspect-square text-blue-500" />,
+        icon: <KeyIcon className="h-full w-full aspect-square text-green-500" />,
     },
 ];
 
 const Card: React.FC<{ title: string; description: string; icon: React.ReactNode }> = ({ title, description, icon }) => {
     return (
-        <div className="flex h-full flex-col items-start justify-start rounded-3xl border border-gray-800/50 bg-[#426135]/50 p-7 text-start shadow-2xl shadow-blue-500/10 backdrop-blur-md">
+        <div className="flex h-full flex-col items-start justify-start rounded-3xl border border-gray-800/50 bg-[#181c14]/50 p-7 text-start shadow-2xl shadow-green-500/10 backdrop-blur-md">
             <div className="mb-8 flex size-16 items-center justify-center rounded-xl bg-gray-900 p-4">{icon}</div>
             <h3 className="mb-2 text-xl font-bold text-white">{title}</h3>
             <p className="text-gray-400">{description}</p>

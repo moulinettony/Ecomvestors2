@@ -1,7 +1,7 @@
 :root {
     /* Colors chosen to match the application's theme */
-    --color-crusta-500: #4f46e5; /* Tailwind indigo-600 */
-    --color-earthcore-600: #2563eb; /* Tailwind blue-600 */
+    --color-crusta-500: #16a34a; /* Tailwind green-600 */
+    --color-earthcore-600: #0d9488; /* Tailwind teal-600 */
 }
 
 /* 

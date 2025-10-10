@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="relative z-10 flex h-auto w-full flex-col flex-wrap items-center justify-center gap-20 border-t border-blue-950 bg-gray-950 px-20 py-5 text-center md:flex-row">
+        <footer className="relative z-10 flex h-auto w-full flex-col flex-wrap items-center justify-center gap-20 border-t border-green-900 bg-gray-950 px-20 py-5 text-center md:flex-row">
             {/* Logo and Links */}
             <div className="flex size-auto flex-1 flex-col items-center justify-start gap-10 md:flex-row">
                 <a className="flex size-auto items-center justify-start bg-none" href={'/'}>

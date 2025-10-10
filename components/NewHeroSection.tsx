@@ -10,7 +10,7 @@ const NewHeroSection: React.FC = () => {
                     >
                         <div>
                             <div>
-                                <p className="relative mb-3 mt-4 inline-block bg-gradient-to-r from-blue-600 to-indigo-400 bg-clip-text text-sm font-extrabold uppercase leading-6 tracking-normal text-transparent lg:pb-6 lg:text-2xl">
+                                <p className="relative mb-3 mt-4 inline-block bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-sm font-extrabold uppercase leading-6 tracking-normal text-transparent lg:pb-6 lg:text-2xl">
                                     لنكن واقعيين.
                                 </p>
                                 <p className="mb-3 mt-6 text-sm tracking-normal text-gray-300 lg:pb-6 lg:text-2xl lg:leading-10">
@@ -18,7 +18,7 @@ const NewHeroSection: React.FC = () => {
                                     المستمر في تكاليف الإعلانات، مما يؤدي إلى خسارة 70% من البائعين—سواء بسبب منتجات
                                     مشبعة، خدمات غير موثوقة، أو التكاليف المرتفعة للحصول على العملاء.
                                 </p>
-                                <p className="relative mb-3 mt-4 inline-block bg-gradient-to-r from-blue-600 to-indigo-400 bg-clip-text text-sm font-extrabold uppercase leading-6 tracking-normal text-transparent lg:pb-6 lg:text-2xl">
+                                <p className="relative mb-3 mt-4 inline-block bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-sm font-extrabold uppercase leading-6 tracking-normal text-transparent lg:pb-6 lg:text-2xl">
                                     لكن، ماذا لو كانت هناك طريقة تناسب الجميع؟
                                 </p>
                                 <p className="mb-3 mt-6 text-sm tracking-normal text-gray-300 lg:pb-6 lg:text-2xl lg:leading-10">
@@ -29,7 +29,7 @@ const NewHeroSection: React.FC = () => {
                                     الدفع عند الاستلام (COD) في أوروبا هو من بين أكثر النماذج التجارية ربحية وقابلية
                                     للتوسع في عام 2025، ويُعد بالفعل صناعة بمليارات الدولارات.
                                 </p>
-                                <p className="relative mb-3 mt-4 inline-block bg-gradient-to-r from-blue-600 to-indigo-400 bg-clip-text text-sm font-extrabold uppercase leading-6 tracking-normal text-transparent lg:pb-6 lg:text-2xl">
+                                <p className="relative mb-3 mt-4 inline-block bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-sm font-extrabold uppercase leading-6 tracking-normal text-transparent lg:pb-6 lg:text-2xl">
                                     نحن هنا لنساعدك على النجاح:
                                 </p>
                                 <p className="mb-3 mt-6 text-sm tracking-normal text-gray-300 lg:pb-6 lg:text-2xl">
@@ -41,7 +41,7 @@ const NewHeroSection: React.FC = () => {
                                 <p className="mb-3 mt-6 text-sm tracking-normal text-gray-300 lg:pb-6 lg:text-2xl">
                                     نقدم أقل تكاليف للتنفيذ تبدأ من 3 يوروهات فقط مع معدل تأكيد يصل إلى 90%.
                                 </p>
-                                <p className="relative mb-3 mt-4 inline-block bg-gradient-to-r from-blue-600 to-indigo-400 bg-clip-text text-sm font-extrabold uppercase leading-6 tracking-normal text-transparent lg:pb-6 lg:text-2xl">
+                                <p className="relative mb-3 mt-4 inline-block bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-sm font-extrabold uppercase leading-6 tracking-normal text-transparent lg:pb-6 lg:text-2xl">
                                     لماذا نفعل هذا؟
                                 </p>
                                 <p className="mb-3 mt-6 text-sm tracking-normal text-gray-300 lg:pb-6 lg:text-2xl lg:leading-10">

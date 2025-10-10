@@ -113,7 +113,7 @@ const ContactForm: React.FC = () => {
             <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-4 lg:px-8 lg:grid-cols-2">
                 <div className="max-w-md">
                     <div className="mb-8 flex justify-start">
-                        <div className="relative inline-block bg-gradient-to-r from-blue-600 to-indigo-400 bg-clip-text text-sm font-bold uppercase leading-6 text-transparent">
+                        <div className="relative inline-block bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-sm font-bold uppercase leading-6 text-transparent">
                             قدم طلبك فقط إذا كنت مستعدًا للبدء وتمتلك رأس المال الكافي كما هو موضح في الخيارات
                         </div>
                     </div>
@@ -139,7 +139,7 @@ const ContactForm: React.FC = () => {
                                     onChange={handleChange}
                                     placeholder="محمد العليمي"
                                     type="text"
-                                    className="flex h-10 w-full rounded-md border border-gray-700 bg-gray-900 px-3 py-2 text-sm text-white ring-offset-black file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                                    className="flex h-10 w-full rounded-md border border-gray-700 bg-gray-900 px-3 py-2 text-sm text-white ring-offset-black file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                                 />
                                 <FormMessage>{errors.fullName}</FormMessage>
                                 <FormDescription>نحتاج إلى اسمك الكامل لنخاطبك بشكل صحيح.</FormDescription>
@@ -154,7 +154,7 @@ const ContactForm: React.FC = () => {
                                     placeholder="+212 XXX XXX XXX"
                                     type="text"
                                     dir="ltr"
-                                    className="flex text-right h-10 w-full rounded-md border border-gray-700 bg-gray-900 px-3 py-2 text-sm text-white ring-offset-black file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                                    className="flex text-right h-10 w-full rounded-md border border-gray-700 bg-gray-900 px-3 py-2 text-sm text-white ring-offset-black file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                                 />
                                 <FormMessage>{errors.phoneNumber}</FormMessage>
                                 <FormDescription>نحتاج إلى رقم هاتفك للتواصل معك.</FormDescription>
@@ -171,7 +171,7 @@ const ContactForm: React.FC = () => {
                                         };
                                         return (
                                             <div key={value} className="flex items-center gap-x-3">
-                                                <input type="radio" id={`hear_${value}`} name="whereDidYouHear" value={value} checked={formData.whereDidYouHear === value} onChange={(e) => handleRadioChange('whereDidYouHear', e.target.value)} className="h-4 w-4 text-blue-600 bg-gray-700 border-gray-600 focus:ring-blue-500" />
+                                                <input type="radio" id={`hear_${value}`} name="whereDidYouHear" value={value} checked={formData.whereDidYouHear === value} onChange={(e) => handleRadioChange('whereDidYouHear', e.target.value)} className="h-4 w-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-green-500" />
                                                 <label htmlFor={`hear_${value}`} className="font-normal text-gray-300">{labels[value]}</label>
                                             </div>
                                         )
@@ -184,7 +184,7 @@ const ContactForm: React.FC = () => {
                                 <div className="flex flex-col space-y-1">
                                     {['YES', 'NO'].map(value => (
                                          <div key={value} className="flex items-center gap-x-3">
-                                            <input type="radio" id={`exp_${value}`} name="experienceInEcom" value={value} checked={formData.experienceInEcom === value} onChange={(e) => handleRadioChange('experienceInEcom', e.target.value)} className="h-4 w-4 text-blue-600 bg-gray-700 border-gray-600 focus:ring-blue-500" />
+                                            <input type="radio" id={`exp_${value}`} name="experienceInEcom" value={value} checked={formData.experienceInEcom === value} onChange={(e) => handleRadioChange('experienceInEcom', e.target.value)} className="h-4 w-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-green-500" />
                                             <label htmlFor={`exp_${value}`} className="font-normal text-gray-300">{value === 'YES' ? 'نعم' : 'لا'}</label>
                                         </div>
                                     ))}
@@ -202,7 +202,7 @@ const ContactForm: React.FC = () => {
                                         };
                                         return (
                                             <div key={value} className="flex items-center gap-x-3">
-                                                <input type="radio" id={`budget_${value}`} name="budgetRange" value={value} checked={formData.budgetRange === value} onChange={(e) => handleRadioChange('budgetRange', e.target.value)} className="h-4 w-4 text-blue-600 bg-gray-700 border-gray-600 focus:ring-blue-500" />
+                                                <input type="radio" id={`budget_${value}`} name="budgetRange" value={value} checked={formData.budgetRange === value} onChange={(e) => handleRadioChange('budgetRange', e.target.value)} className="h-4 w-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-green-500" />
                                                 <label htmlFor={`budget_${value}`} className="font-normal text-gray-300"><span dir="ltr">{labels[value]}</span></label>
                                             </div>
                                         )
@@ -218,7 +218,7 @@ const ContactForm: React.FC = () => {
                                         name="termsAccepted"
                                         checked={formData.termsAccepted}
                                         onChange={handleChange}
-                                        className="h-5 w-5 mt-0.5 rounded border-gray-600 bg-gray-700 text-blue-600 focus:ring-blue-500"
+                                        className="h-5 w-5 mt-0.5 rounded border-gray-600 bg-gray-700 text-green-600 focus:ring-green-500"
                                     />
                                     <div>
                                     <label
@@ -237,7 +237,7 @@ const ContactForm: React.FC = () => {
                             <div className="flex w-full flex-row items-center justify-end gap-2">
                                 <Button
                                     type="button"
-                                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 transform-gpu transition-transform duration-200 hover:scale-105 active:scale-95 border border-white bg-blue-700 font-bold text-white shadow-2xl shadow-blue-500/50 hover:bg-gray-900 hover:text-blue-600 active:bg-blue-950 active:text-blue-500 h-10 px-4 py-2 rounded-full"
+                                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 transform-gpu transition-transform duration-200 hover:scale-105 active:scale-95 border border-white bg-green-700 font-bold text-white shadow-2xl shadow-green-500/50 hover:bg-gray-900 hover:text-green-600 active:bg-green-950 active:text-green-500 h-10 px-4 py-2 rounded-full"
                                     variant={'secondary'}
                                     shape={'pill'}
                                     onClick={() => {
@@ -252,12 +252,12 @@ const ContactForm: React.FC = () => {
                                 </Button>
 
                                 {isLoading ? (
-                                    <Button variant={'default'} shape={'pill'} type="button" disabled className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 transform-gpu transition-transform duration-200 hover:scale-105 active:scale-95 border border-blue-500 bg-white font-bold text-blue-500 shadow-2xl shadow-blue-500/50 hover:bg-blue-50 hover:text-blue-600 active:bg-blue-100 h-10 px-4 py-2 rounded-full">
+                                    <Button variant={'default'} shape={'pill'} type="button" disabled className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 transform-gpu transition-transform duration-200 hover:scale-105 active:scale-95 border border-green-500 bg-white font-bold text-green-500 shadow-2xl shadow-green-500/50 hover:bg-green-50 hover:text-green-600 active:bg-green-100 h-10 px-4 py-2 rounded-full">
                                         <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
                                         يرجى الانتظار
                                     </Button>
                                 ) : (
-                                    <Button type="submit" variant={'default'} shape={'pill'} className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 transform-gpu transition-transform duration-200 hover:scale-105 active:scale-95 border border-blue-500 bg-white font-bold text-blue-500 shadow-2xl shadow-blue-500/50 hover:bg-blue-50 hover:text-blue-600 active:bg-blue-100 h-10 px-4 py-2 rounded-full">
+                                    <Button type="submit" variant={'default'} shape={'pill'} className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 transform-gpu transition-transform duration-200 hover:scale-105 active:scale-95 border border-green-500 bg-white font-bold text-green-500 shadow-2xl shadow-green-500/50 hover:bg-green-50 hover:text-green-600 active:bg-green-100 h-10 px-4 py-2 rounded-full">
                                         أرسل طلبك
                                     </Button>
                                 )}

@@ -15,7 +15,7 @@ const WhosMe: React.FC = () => {
                 </div>
                 <div className="flex h-full w-full max-w-2xl flex-col items-start justify-center">
                     <div className="mb-8 flex justify-start">
-                        <div className="relative inline-block bg-gradient-to-r from-blue-600 to-indigo-400 bg-clip-text text-sm font-bold uppercase leading-6 text-transparent">
+                        <div className="relative inline-block bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-sm font-bold uppercase leading-6 text-transparent">
                             من أنا؟
                         </div>
                     </div>

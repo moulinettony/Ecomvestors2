@@ -118,7 +118,7 @@ const HeroSection: React.FC = () => {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        backgroundColor: '#4262359c',
+        backgroundColor: '#181c149c',
         borderRadius: '0.5rem',
         width: '125px',
         height: '80px',
@@ -143,7 +143,7 @@ const HeroSection: React.FC = () => {
                             />
                         </div>
                         <div className="mb-2 flex justify-center ">
-                            <div className="relative inline-block bg-gradient-to-r from-blue-600 to-indigo-400 bg-clip-text text-[10px] font-bold text-transparent lg:text-sm">
+                            <div className="relative inline-block bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-[10px] font-bold text-transparent lg:text-sm">
                                 تقديم النسخة 4.0 من برنامج إيكومفيستورز
                             </div>
                         </div>
@@ -220,7 +220,7 @@ const HeroSection: React.FC = () => {
                                         borderColor: '#5b7b4e',
                                         boxShadow: '0 0 12px 3px #5b7b4eff inset',
                                     }}
-                                    className="w-full flex flex-col max-w-[900px] rounded-lg border-2 bg-[#426135] py-4 px-7 text-center text-xl font-bold text-white no-underline transition-transform duration-200 hover:scale-105 active:scale-95"
+                                    className="w-full flex flex-col max-w-[900px] rounded-lg border-2 bg-[#181c14] py-4 px-7 text-center text-xl font-bold text-white no-underline transition-transform duration-200 hover:scale-105 active:scale-95"
                                 >
                                   <span> انضم قبل زيادة السعر</span>
                                 <span className="font-light text-sm text-[#ffffffcc] mt-1">( وفر 850$ على الوصول مدى الحياة اليوم )</span>
@@ -268,7 +268,7 @@ const HeroSection: React.FC = () => {
                         aria-hidden="true"
                     >
                         <div
-                            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-blue-600 to-indigo-500 opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+                            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-green-500 to-teal-600 opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
                             style={{
                                 clipPath:
                                     'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
@@ -280,7 +280,7 @@ const HeroSection: React.FC = () => {
                         aria-hidden="true"
                     >
                         <div
-                            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-blue-600 to-indigo-500 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-green-500 to-teal-600 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
                             style={{
                                 clipPath:
                                     'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',

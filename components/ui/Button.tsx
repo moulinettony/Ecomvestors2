@@ -16,17 +16,17 @@ const Button: React.FC<ButtonProps> = ({ children, variant = 'default', size = '
   }
   
   const baseClasses = [
-    'inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+    'inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
     'transform-gpu transition-transform duration-200 hover:scale-105 active:scale-95',
   ].join(' ');
   
   const variantClasses = {
-    default: 'border border-blue-500 bg-white font-bold text-blue-500 shadow-2xl shadow-blue-500/50 hover:bg-blue-50 hover:text-blue-600 active:bg-blue-100',
-    secondary: 'border border-white bg-blue-700 font-bold text-white shadow-2xl shadow-blue-500/50 hover:bg-gray-900 hover:text-blue-600 active:bg-blue-950 active:text-blue-500',
+    default: 'border border-green-500 bg-white font-bold text-green-500 shadow-2xl shadow-green-500/50 hover:bg-green-50 hover:text-green-600 active:bg-green-100',
+    secondary: 'border border-white bg-green-700 font-bold text-white shadow-2xl shadow-green-500/50 hover:bg-gray-900 hover:text-green-600 active:bg-green-950 active:text-green-500',
     outline: 'border border-gray-700 bg-transparent hover:bg-gray-800 hover:text-white',
     destructive: 'bg-red-500 text-white hover:bg-red-600',
     ghost: 'hover:bg-gray-800 hover:text-white',
-    link: 'text-blue-500 underline-offset-4 hover:underline',
+    link: 'text-green-500 underline-offset-4 hover:underline',
     green: 'border border-white bg-green-600 font-semibold text-white shadow-2xl shadow-green-500/50 transition-all hover:bg-green-700',
   };
 
