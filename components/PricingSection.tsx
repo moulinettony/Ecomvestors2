@@ -46,8 +46,8 @@ const plans: Plan[] = [
 ];
 
 const cardStyle: React.CSSProperties = {
-    background: 'radial-gradient(circle at top, #04785740, transparent 40%), rgb(3 7 18 / 0.5)',
-    border: '1px solid rgba(255, 255, 255, 0.08)',
+    background: 'radial-gradient(circle at center top, rgba(4, 120, 87, 0.25), transparent 40%), rgb(9 12 7 / 54%)',
+    border: '1px solid #1e2815',
 };
 
 const PricingSection = () => {
@@ -127,7 +127,7 @@ const PricingSection = () => {
 
                             <a
                                 href="#form"
-                                className="mt-6 inline-flex h-11 w-full transform-gpu items-center justify-center gap-2 whitespace-nowrap rounded-full bg-green-700 px-8 text-sm font-bold text-white shadow-2xl shadow-green-500/50 ring-offset-background transition-transform duration-200 hover:scale-105 hover:bg-gray-900 hover:text-green-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 active:scale-95 active:bg-green-950 active:text-green-500 disabled:pointer-events-none disabled:opacity-50"
+                                className="mt-6 inline-flex h-11 w-full transform-gpu items-center justify-center gap-2 whitespace-nowrap rounded-full bg-green-700 px-8 text-sm font-bold text-white shadow-2xl shadow-green-500/50 ring-offset-background transition-transform duration-200 hover:scale-105 hover:bg-[#1d9248] hover:text-green-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 active:scale-95 active:bg-green-950 active:text-green-500 disabled:pointer-events-none disabled:opacity-50"
                             >
                                 ابدأ الآن
                             </a>

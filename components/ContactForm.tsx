@@ -139,7 +139,7 @@ const ContactForm: React.FC = () => {
                                     onChange={handleChange}
                                     placeholder="محمد العليمي"
                                     type="text"
-                                    className="flex h-10 w-full rounded-md border border-gray-700 bg-gray-900 px-3 py-2 text-sm text-white ring-offset-black file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                                    className="flex h-10 w-full rounded-md border border-gray-700 bg-[#0f130a7a] px-3 py-2 text-sm text-white ring-offset-black file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                                 />
                                 <FormMessage>{errors.fullName}</FormMessage>
                                 <FormDescription>نحتاج إلى اسمك الكامل لنخاطبك بشكل صحيح.</FormDescription>
@@ -154,7 +154,7 @@ const ContactForm: React.FC = () => {
                                     placeholder="+212 XXX XXX XXX"
                                     type="text"
                                     dir="ltr"
-                                    className="flex text-right h-10 w-full rounded-md border border-gray-700 bg-gray-900 px-3 py-2 text-sm text-white ring-offset-black file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                                    className="flex text-right h-10 w-full rounded-md border border-gray-700 bg-[#0f130a7a] px-3 py-2 text-sm text-white ring-offset-black file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                                 />
                                 <FormMessage>{errors.phoneNumber}</FormMessage>
                                 <FormDescription>نحتاج إلى رقم هاتفك للتواصل معك.</FormDescription>
@@ -237,7 +237,7 @@ const ContactForm: React.FC = () => {
                             <div className="flex w-full flex-row items-center justify-end gap-2">
                                 <Button
                                     type="button"
-                                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 transform-gpu transition-transform duration-200 hover:scale-105 active:scale-95 border border-white bg-green-700 font-bold text-white shadow-2xl shadow-green-500/50 hover:bg-gray-900 hover:text-green-600 active:bg-green-950 active:text-green-500 h-10 px-4 py-2 rounded-full"
+                                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 transform-gpu transition-transform duration-200 hover:scale-105 active:scale-95 border border-white bg-green-700 font-bold text-white shadow-2xl shadow-green-500/50 hover:bg-[#0f130a7a] hover:text-green-600 active:bg-green-950 active:text-green-500 h-10 px-4 py-2 rounded-full"
                                     variant={'secondary'}
                                     shape={'pill'}
                                     onClick={() => {

@@ -220,7 +220,7 @@ const HeroSection: React.FC = () => {
                                         borderColor: '#5b7b4e',
                                         boxShadow: '0 0 12px 3px #5b7b4eff inset',
                                     }}
-                                    className="w-full flex flex-col max-w-[900px] rounded-lg border-2 bg-[#181c14] py-4 px-7 text-center text-xl font-bold text-white no-underline transition-transform duration-200 hover:scale-105 active:scale-95"
+                                    className="w-full flex flex-col max-w-[900px] rounded-lg border-2 bg-[#426135] py-4 px-7 text-center text-xl font-bold text-white no-underline transition-transform duration-200 hover:scale-105 active:scale-95"
                                 >
                                   <span> انضم قبل زيادة السعر</span>
                                 <span className="font-light text-sm text-[#ffffffcc] mt-1">( وفر 850$ على الوصول مدى الحياة اليوم )</span>
