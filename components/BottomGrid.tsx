@@ -40,7 +40,7 @@ const CourseCard = () => {
 
   return (
 
-    <div className="border border-gray-800 rounded-3xl p-6 flex flex-col lg:h-[320px] bg-gray-950/50 justify-between">
+    <div className="border border-gray-800 rounded-3xl p-6 flex flex-col lg:h-[320px] bg-[#1f2914] /50 justify-between">
       <div>
         <h3 className="text-2xl font-medium text-white">The Course</h3>
         <p className="text-white/75 mt-2 leading-snug">Step-by-step strategy, tactics, and templates to build, launch, and scale a real brand.</p>
@@ -71,7 +71,7 @@ const CourseCard = () => {
 };
 
 const ResourceVaultCard = () => (
-  <div className="border border-gray-800 rounded-3xl p-6 flex flex-col lg:h-[320px] bg-gray-950/50 justify-between">
+  <div className="border border-gray-800 rounded-3xl p-6 flex flex-col lg:h-[320px] bg-[#1f2914] /50 justify-between">
     <div>
       <h3 className="text-2xl font-medium text-white">The Resource Vault</h3>
       <p className="text-white/75 mt-2 leading-snug">Tested funnels, automations, ad templates, email flows, everything we actually use inside our brands.</p>
@@ -79,7 +79,7 @@ const ResourceVaultCard = () => (
     <div className="flex-grow flex items-center justify-center mt-4 border border-gray-800 rounded-2xl p-4">
       {/* Our Solution */}
       <div className="flex flex-col items-center text-center">
-        <div className="w-16 h-16 border border-gray-800 rounded-lg bg-gray-950/80 backdrop-blur-sm flex items-center justify-center">
+        <div className="w-16 h-16 border border-gray-800 rounded-lg bg-[#1f2914] /80 backdrop-blur-sm flex items-center justify-center">
           <div className="w-10 h-10 relative flex justify-center items-center" style={{ filter: 'blur(1px)' }}>
             <div
               className="absolute w-full h-full rounded-full animate-rotate-left"
@@ -133,7 +133,7 @@ const ResourceVaultCard = () => (
 
       {/* Your Sales */}
       <div className="flex flex-col items-center text-center">
-        <div className="w-16 h-16 border border-gray-800 rounded-lg bg-gray-950/80 backdrop-blur-sm flex items-center justify-center">
+        <div className="w-16 h-16 border border-gray-800 rounded-lg bg-[#1f2914] /80 backdrop-blur-sm flex items-center justify-center">
           <img src="https://www.edigitalagency.com.au/wp-content/uploads/Shopify-Logo-White.png" alt="Shopify" className="w-10 h-10" />
         </div>
         <p className="text-[10px] mt-2 text-white/90">Your Sales</p>
@@ -160,7 +160,7 @@ const AiDevelopmentCard = () => {
   ];
 
   return (
-    <div className="border border-gray-800 rounded-3xl p-6 flex flex-col lg:h-[320px] bg-gray-950/50 justify-between">
+    <div className="border border-gray-800 rounded-3xl p-6 flex flex-col lg:h-[320px] bg-[#1f2914] /50 justify-between">
       <div>
         <h3 className="text-2xl font-medium text-white">AI Development</h3>
         <p className="text-white/75 mt-2 leading-snug">Our team builds intelligent automation systems tailored to your business processes.</p>
@@ -195,7 +195,7 @@ const AiDevelopmentCard = () => {
 
 
 const CommunityCard = () => (
-  <div className="border border-gray-800 rounded-3xl p-6 flex flex-col lg:h-[320px] bg-gray-950/50 justify-between">
+  <div className="border border-gray-800 rounded-3xl p-6 flex flex-col lg:h-[320px] bg-[#1f2914] /50 justify-between">
     <div>
       <h3 className="text-2xl font-medium text-white">The Community</h3>
       <p className="text-white/75 mt-2 leading-snug">Private group of eCom operators. No influencers. No fake screenshots. Just results.</p>
@@ -275,7 +275,7 @@ const CommunityCard = () => (
 
 const BottomGrid: React.FC = () => {
   return (
-    <section className="py-10 text-white bg-gray-950">
+    <section className="py-10 text-white bg-[##181c14]">
       <style>{`
                 @keyframes radar-scan {
                     from { transform: rotate(0deg); }

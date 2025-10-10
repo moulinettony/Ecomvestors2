@@ -64,7 +64,7 @@ const column3Data: Testimonial[] = [
 // and resolves incorrect 'property does not exist' errors at the call site.
 const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }) => (
     <li className="w-full flex-shrink-0">
-        <div className="flex h-full items-end flex-col justify-between rounded-3xl bg-gray-950/50 border border-gray-800/50 backdrop-blur-md p-6 space-y-6">
+        <div className="flex h-full items-end flex-col justify-between rounded-3xl bg-[#181c14] /50 border border-gray-800/50 backdrop-blur-md p-6 space-y-6">
             <div className="aspect-video w-full overflow-hidden rounded-xl">
                 <img
                     src={testimonial.image}
@@ -103,7 +103,7 @@ const MarqueeColumn = ({ testimonials, reverse = false, duration = "80s" }: { te
 
 const Tickers: React.FC = () => {
     return (
-        <section dir="rtl" className="py-10 sm:py-20 bg-gray-950 overflow-hidden text-center text-white">
+        <section dir="rtl" className="py-10 sm:py-20 bg-[#181c14]  overflow-hidden text-center text-white">
              <style>{`
                 @keyframes marquee-vertical {
                     from { transform: translateY(0); }
