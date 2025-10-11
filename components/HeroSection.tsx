@@ -151,7 +151,7 @@ const HeroSection: React.FC = () => {
                             <h1 className="text-2xl font-bold tracking-normal text-gray-50 pb-1 lg:text-4xl lg:leading-10">
                                 إليك خطة محكمة لتحقيق دخل يتراوح بين 20k € إلى 50k € شهريًا، في أوروبا الشرقية
                             </h1>
-                             <p className="text-sm tracking-normal text-gray-300 lg:text-xl lg:leading-10">
+                            <p className="text-sm tracking-normal text-gray-300 lg:text-xl lg:leading-10">
                                 أكثر من 800 عضو • أكثر من 650 منتج رابح •{' '}
                                 <span className="relative inline-block bg-gradient-to-r from-green-500 to-green-800 bg-clip-text uppercase tracking-normal text-transparent">
                                     {' '}
@@ -178,36 +178,12 @@ const HeroSection: React.FC = () => {
                                             className={`wistia_responsive_padding rounded-2xl shadow-2xl overflow-hidden transition-all duration-1000 ease-out ${isVideoVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
                                             style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
                                             <div className="wistia_responsive_wrapper" style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}>
-                                                {isPlaying ? (
-                                                    <div
-                                                        className="wistia_embed wistia_async_jgb3pqs49i autoPlay=true videoFoam=true playerColor=32d09f controlsVisibleOnLoad=true settingsControl=false wistiaButton=false plugin[wistia-branding][remove]=true"
-                                                        style={{ height: '100%', position: 'relative', width: '100%' }}
-                                                    >
-                                                        &nbsp;
-                                                    </div>
-                                                ) : (
-                                                    <div style={{ position: 'relative', width: '100%', height: '100%', cursor: 'pointer' }} onClick={() => setIsPlaying(true)}>
-                                                        <img
-                                                            src="https://i.ibb.co/8nhLfrk6/Whats-App-Image-2025-10-09-at-8-28-09-PM.jpg"
-                                                            alt="Play video about commission-only sales reps"
-                                                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                                        />
-                                                        <div
-                                                            className=""
-                                                            style={playButtonOverlayStyle}
-                                                            onMouseOver={e => {
-                                                                e.currentTarget.style.transform = 'translate(-50%, -50%) scale(1.1)';
-                                                            }}
-                                                            onMouseOut={e => {
-                                                                e.currentTarget.style.transform = 'translate(-50%, -50%) scale(1)';
-                                                            }}
-                                                        >
-                                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" viewBox="0 0 24 24" fill="white">
-                                                                <path d="M8 5v14l11-7z" />
-                                                            </svg>
-                                                        </div>
-                                                    </div>
-                                                )}
+                                                <div
+                                                    className="wistia_embed wistia_async_wea4kqvck2 autoPlay=true muted=true videoFoam=true playerColor=32d09f controlsVisibleOnLoad=true settingsControl=false wistiaButton=false plugin[wistia-branding][remove]=true"
+                                                    style={{ height: '100%', position: 'relative', width: '100%' }}
+                                                >
+                                                    &nbsp;
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -222,8 +198,8 @@ const HeroSection: React.FC = () => {
                                     }}
                                     className="w-full flex flex-col max-w-[900px] rounded-lg border-2 bg-[#426135] py-4 px-7 text-center text-xl font-bold text-white no-underline transition-transform duration-200 hover:scale-105 active:scale-95"
                                 >
-                                  <span> انضم قبل زيادة السعر</span>
-                                <span className="font-light text-sm text-[#ffffffcc] mt-1">( وفر 850$ على الوصول مدى الحياة اليوم )</span>
+                                    <span> انضم قبل زيادة السعر</span>
+                                    <span className="font-light text-sm text-[#ffffffcc] mt-1">( وفر 850$ على الوصول مدى الحياة اليوم )</span>
                                 </a>
                             </div>
                             <p className="text-sm tracking-normal text-gray-200 max-lg:px-4 lg:text-xl lg:leading-10">

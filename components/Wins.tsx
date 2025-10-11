@@ -169,7 +169,7 @@ const Wins: React.FC = () => {
                     variant="default"
                     shape="pill"
                     size="lg"
-                    className="w-full max-w-sm text-lg"
+                    className="text-lg"
                 >
                     <span className="flex items-center justify-center text-green-600">
                         <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -180,12 +180,12 @@ const Wins: React.FC = () => {
                     تحميل المزيد
                 </Button>
             )}
-             <a href="#" className="w-full max-w-sm sm:max-w-md md:max-w-lg no-underline">
+             <a href="#" className="no-underline">
                 <Button 
                     variant="secondary" 
                     shape="pill" 
                     size="lg"
-                    className="w-full text-lg"
+                    className="text-lg"
                 >
                     <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path opacity=".4" d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81v8.37C2 19.83 4.17 22 7.81 22h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2Z" fill="currentColor"></path>
