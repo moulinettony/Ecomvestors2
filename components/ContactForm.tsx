@@ -1,7 +1,9 @@
 
-
 import React, { useState } from 'react';
 import Button from './ui/Button';
+
+// TODO: Replace this placeholder with the actual Google Apps Script Web App URL.
+const GOOGLE_SHEET_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzs5s7KkpWepGK9syPGv90F_0jvShT6qtJfcW-oy3LvWqtPayjWnDy6BLeNdSTh_mfUlw/exec';
 
 // A simple loading spinner icon to replace Radix's ReloadIcon
 const ReloadIcon = ({ className }: { className?: string }) => (
@@ -39,6 +41,7 @@ const FormMessage: React.FC<{ children?: React.ReactNode }> = ({ children }) => 
 
 const ContactForm: React.FC = () => {
     const [isLoading, setLoading] = useState<boolean>(false);
+    const [submissionStatus, setSubmissionStatus] = useState<'success' | 'error' | null>(null);
     const [formData, setFormData] = useState({
         fullName: '',
         phoneNumber: '',
@@ -50,6 +53,7 @@ const ContactForm: React.FC = () => {
     const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (submissionStatus) setSubmissionStatus(null);
         const { name, value, type, checked } = e.target;
         setFormData(prev => ({
             ...prev,
@@ -58,6 +62,7 @@ const ContactForm: React.FC = () => {
     };
 
     const handleRadioChange = (name: string, value: string) => {
+        if (submissionStatus) setSubmissionStatus(null);
         setFormData(prev => ({ ...prev, [name]: value }));
     };
     
@@ -82,13 +87,26 @@ const ContactForm: React.FC = () => {
         if (!validate()) {
             return;
         }
+        setLoading(true);
+        setSubmissionStatus(null);
+
+        const dataForSheet = {
+            FullName: formData.fullName,
+            PhoneNumber: formData.phoneNumber,
+            WhereDidYouHear: formData.whereDidYouHear,
+            ExperienceInEcom: formData.experienceInEcom,
+            BudgetRange: formData.budgetRange,
+        };
 
         try {
-            setLoading(true);
-            // Simulate API call
-            await new Promise(resolve => setTimeout(resolve, 1500));
+            await fetch(GOOGLE_SHEET_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors', // Use 'no-cors' to prevent CORS errors on fire-and-forget requests
+                body: JSON.stringify(dataForSheet),
+            });
             
-            alert('تم إرسال طلبك بنجاح.');
+            setSubmissionStatus('success');
+            
             // Reset form
             setFormData({
                 fullName: '',
@@ -102,7 +120,7 @@ const ContactForm: React.FC = () => {
 
         } catch (err: any) {
             console.error('Error submitting form:', err);
-            alert('حدث خطأ أثناء إرسال طلبك.');
+            setSubmissionStatus('error');
         } finally {
             setLoading(false);
         }
@@ -263,6 +281,19 @@ const ContactForm: React.FC = () => {
                                 )}
                             </div>
                         </form>
+                        
+                        {submissionStatus === 'success' && (
+                            <div className="mt-6 p-4 rounded-lg bg-green-500/10 border border-green-500/30 text-green-300 text-center" role="alert">
+                                <p className="font-semibold">تم إرسال طلبك بنجاح!</p>
+                                <p className="text-sm">سنتصل بك قريبًا.</p>
+                            </div>
+                        )}
+                        {submissionStatus === 'error' && (
+                            <div className="mt-6 p-4 rounded-lg bg-red-500/10 border border-red-500/30 text-red-300 text-center" role="alert">
+                                <p className="font-semibold">حدث خطأ!</p>
+                                <p className="text-sm">حدث خطأ أثناء إرسال طلبك. يرجى المحاولة مرة أخرى.</p>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
