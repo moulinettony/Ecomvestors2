@@ -22,7 +22,7 @@ const Button: React.FC<ButtonProps> = ({ children, variant = 'default', size = '
   
   const variantClasses = {
     default: 'border border-green-500 bg-white font-bold text-green-500 shadow-2xl shadow-green-500/50 hover:bg-green-50 hover:text-green-600 active:bg-green-100',
-    secondary: 'border border-white bg-green-700 font-bold text-white shadow-2xl shadow-green-500/50 hover:bg-[#1d9248] hover:text-green-600 active:bg-green-950 active:text-green-500',
+    secondary: 'border border-white bg-green-700 font-bold text-white shadow-2xl shadow-green-500/50 hover:bg-[#1d9248] active:bg-green-950 active:text-green-500',
     outline: 'border border-gray-700 bg-transparent hover:bg-gray-800 hover:text-white',
     destructive: 'bg-red-500 text-white hover:bg-red-600',
     ghost: 'hover:bg-gray-800 hover:text-white',

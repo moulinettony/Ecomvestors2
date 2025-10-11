@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Button from './ui/Button';
 
 // TODO: Replace this placeholder with the actual Google Apps Script Web App URL.
-const GOOGLE_SHEET_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzs5s7KkpWepGK9syPGv90F_0jvShT6qtJfcW-oy3LvWqtPayjWnDy6BLeNdSTh_mfUlw/exec';
+const GOOGLE_SHEET_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwOJiIntf8NGac0AgDnwZLns4_tIUAd35R-p6dFmPKuvh08e38btpf5DaX0HGGj2SX8rg/exec';
 
 // A simple loading spinner icon to replace Radix's ReloadIcon
 const ReloadIcon = ({ className }: { className?: string }) => (
@@ -252,12 +252,24 @@ const ContactForm: React.FC = () => {
                             </FormItem>
 
 
-                            <div className="flex w-full flex-row items-center justify-end gap-2">
+                            <div className="flex w-full flex-row items-center gap-2">
+                                {isLoading ? (
+                                    <Button variant={'secondary'} shape={'pill'} size="md" className="py-2" type="button" disabled>
+                                        <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
+                                        يرجى الانتظار
+                                    </Button>
+                                ) : (
+                                    <Button type="submit" variant={'secondary'} shape={'pill'} size="md" className="py-2">
+                                        أرسل طلبك
+                                    </Button>
+                                )}
+
                                 <Button
                                     type="button"
-                                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 transform-gpu transition-transform duration-200 hover:scale-105 active:scale-95 border border-white bg-green-700 font-bold text-white shadow-2xl shadow-green-500/50 hover:bg-[#0f130a7a] hover:text-green-600 active:bg-green-950 active:text-green-500 h-10 px-4 py-2 rounded-full"
-                                    variant={'secondary'}
+                                    variant={'default'}
                                     shape={'pill'}
+                                    size="md"
+                                    className="py-2 hover:bg-[#0f130a7a]"
                                     onClick={() => {
                                         setFormData({
                                             fullName: '', phoneNumber: '', whereDidYouHear: 'INSTAGRAM',
@@ -268,17 +280,6 @@ const ContactForm: React.FC = () => {
                                 >
                                     إعادة تعيين
                                 </Button>
-
-                                {isLoading ? (
-                                    <Button variant={'default'} shape={'pill'} type="button" disabled className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 transform-gpu transition-transform duration-200 hover:scale-105 active:scale-95 border border-green-500 bg-white font-bold text-green-500 shadow-2xl shadow-green-500/50 hover:bg-green-50 hover:text-green-600 active:bg-green-100 h-10 px-4 py-2 rounded-full">
-                                        <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
-                                        يرجى الانتظار
-                                    </Button>
-                                ) : (
-                                    <Button type="submit" variant={'default'} shape={'pill'} className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 transform-gpu transition-transform duration-200 hover:scale-105 active:scale-95 border border-green-500 bg-white font-bold text-green-500 shadow-2xl shadow-green-500/50 hover:bg-green-50 hover:text-green-600 active:bg-green-100 h-10 px-4 py-2 rounded-full">
-                                        أرسل طلبك
-                                    </Button>
-                                )}
                             </div>
                         </form>
                         
