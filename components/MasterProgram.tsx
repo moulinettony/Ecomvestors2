@@ -16,20 +16,8 @@ const features: Array<{
         title: 'تدريب فردي يومي',
         description:
             'في برنامج EV، نعمل جنبًا إلى جنب مع المدربين وفريقك لمساعدتك في تأسيس نموذج عملك للدفع عند الاستلام. من خلال التواصل اليومي وجلسات التدريب الفردي على قناة Slac الخاصة بك، نقدم لك أسهل طريقة للتعلم من خلال الممارسة.',
-        image: 'https://www.ecomvestors.com/assets/images/image-2.png',
-    },
-    {
-        title: 'منتجات رابحة مضمونة',
-        description:
-            'نوفر لك منتجًا رابحًا مضمونًا من بين 5 منتجات تم اختبارها بعناية، بناءً على بيانات حصرية من شركائنا الصينيين الذين يقدمون أحدث المنتجات الرائجة.',
-        image: 'https://www.ecomvestors.com/assets/images/image-3.png',
-    },
-    {
-        title: 'أقل تكاليف للتنفيذ',
-        description:
-            'نقدم أقل تكاليف للتنفيذ تبدأ من 3 يوروهات فقط مع معدل تأكيد يصل إلى 90%. نجاحك هو استثمارنا الأكبر، وهدفنا أن نبني معًا مستقبلًا مليئًا بالفرص.',
-        image: 'https://www.ecomvestors.com/assets/images/image-4.png',
-    },
+        image: 'https://i.ibb.co/Zzf7yhsj/003.png',
+    }
 ];
 
 const Card: React.FC<{
