@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import SparklesCore from './ui/SparklesCore';
+import Button from './ui/Button';
 
 // Define item types for the gallery and lightbox
 interface GalleryItem {
@@ -131,9 +132,9 @@ const Wins: React.FC = () => {
         </div>
 
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 md:px-8 relative z-10">
-        <a href="#" className="text-sm text-green-400 font-semibold mb-2 inline-block">
+        <p className="text-sm text-green-400 font-semibold mb-2 inline-block">
           عرض قصص النجاح
-        </a>
+        </p>
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
           نظرة سريعة على الانتصارات
         </h2>
@@ -163,9 +164,13 @@ const Wins: React.FC = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             {visibleItemsCount < galleryItems.length && (
-                <button 
+                 <Button
                     onClick={handleLoadMore}
-                    className="w-full max-w-sm bg-white text-gray-900 font-bold py-4 px-8 rounded-full flex items-center justify-center gap-3 hover:bg-gray-200 transition-colors duration-300 text-lg shadow-lg">
+                    variant="default"
+                    shape="pill"
+                    size="lg"
+                    className="w-full max-w-sm text-lg"
+                >
                     <span className="flex items-center justify-center text-green-600">
                         <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path opacity=".4" d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81v8.37C2 19.83 4.17 22 7.81 22h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2Z" fill="currentColor"></path>
@@ -173,14 +178,21 @@ const Wins: React.FC = () => {
                         </svg>
                     </span>
                     تحميل المزيد
-                </button>
+                </Button>
             )}
-            <a href="#" className="w-full max-w-sm sm:max-w-md md:max-w-lg bg-green-600 text-white font-bold py-4 px-8 rounded-full flex items-center justify-center gap-3 hover:bg-green-700 transition-colors duration-300 text-lg shadow-lg shadow-green-500/50">
+             <a href="#" className="w-full max-w-sm sm:max-w-md md:max-w-lg no-underline">
+                <Button 
+                    variant="secondary" 
+                    shape="pill" 
+                    size="lg"
+                    className="w-full text-lg"
+                >
                     <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path opacity=".4" d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81v8.37C2 19.83 4.17 22 7.81 22h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2Z" fill="currentColor"></path>
                         <path d="M12 15.881a3.88 3.88 0 1 0 0-7.76 3.88 3.88 0 0 0 0 7.76ZM17 7.5a.99.99 0 0 1-.71-.29c-.09-.1-.16-.21-.21-.33A.995.995 0 0 1 16 6.5c0-.13.03-.26.08-.38.05-.13.12-.23.21-.33.23-.23.58-.34.9-.27.07.01.13.03.19.06.06.02.12.05.18.09.05.03.1.08.15.12.09.1.16.2.21.33.05.12.08.25.08.38s-.03.26-.08.38-.12.23-.21.33c-.1.09-.21.16-.33.21-.12.05-.25.08-.38.08Z" fill="currentColor"></path>
                     </svg>
-                اكتشف المزيد من قصص النجاح على انستغرام
+                    اكتشف المزيد على انستغرام
+                </Button>
             </a>
         </div>
       </div>

@@ -143,7 +143,7 @@ const HeroSection: React.FC = () => {
                             />
                         </div>
                         <div className="mb-2 flex justify-center ">
-                            <div className="relative inline-block bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-[10px] font-bold text-transparent lg:text-sm">
+                            <div className="relative inline-block bg-gradient-to-r from-blue-600 to-indigo-400 bg-clip-text text-[10px] font-bold text-transparent lg:text-sm">
                                 تقديم النسخة 5.0 من برنامج إيكومفيستورز
                             </div>
                         </div>

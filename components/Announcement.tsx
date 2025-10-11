@@ -22,7 +22,7 @@ const Announcement: React.FC = () => {
                 </p>
                 <a
                     href="#form"
-                    className="flex-none rounded-full bg-[#1d9248] px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+                    className="flex-none rounded bg-[#1d9248] px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
                 >
                     سجل الآن <span aria-hidden="true">&rarr;</span>
                 </a>

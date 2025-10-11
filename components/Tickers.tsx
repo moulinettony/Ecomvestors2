@@ -15,14 +15,14 @@ const column1Data: Testimonial[] = [
         quote: 'الأفضل.. تواصل سريع وتنفيذ سريع. الهدف التالي هو 20 ألف يوميًا.',
         avatar: 'https://www.ecomvestors.com/assets/avatars/1.png',
         name: 'Ouassim',
-        country: 'هولندا',
+        country: 'Netherlands',
     },
     {
         image: 'https://www.ecomvestors.com/assets/testimonials/images/image-2.jpg',
         quote: 'رؤى حقيقية، لا يوجد مثيل لهذا.',
         avatar: 'https://www.ecomvestors.com/assets/avatars/2.png',
         name: 'Chris',
-        country: 'هولندا',
+        country: 'Netherlands',
     },
 ];
 
@@ -32,14 +32,14 @@ const column2Data: Testimonial[] = [
         quote: 'أنا هنا منذ شهرين، وما زلت أتفاجأ في كل مرة بالدعم والنصائح التي أتلقاها.',
         avatar: 'https://www.ecomvestors.com/assets/avatars/3.png',
         name: 'Louis',
-        country: 'فرنسا',
+        country: 'France',
     },
     {
         image: 'https://www.ecomvestors.com/assets/testimonials/images/image-4.jpg',
         quote: 'الأفضل.. تواصل سريع وتنفيذ سريع. الهدف التالي هو 20 ألف يوميًا.',
         avatar: 'https://www.ecomvestors.com/assets/avatars/4.png',
         name: 'Ouassim',
-        country: 'هولندا',
+        country: 'France',
     },
 ];
 
@@ -49,14 +49,14 @@ const column3Data: Testimonial[] = [
         quote: 'الشهر الأول من التدريب 🫡 لم أتوقع هذا يا رفاق.',
         avatar: 'https://www.ecomvestors.com/assets/avatars/5.png',
         name: 'Josh',
-        country: 'المملكة المتحدة',
+        country: 'USA',
     },
     {
         image: 'https://www.ecomvestors.com/assets/testimonials/images/image-6.jpg',
         quote: '', // Empty quote handled gracefully
         avatar: 'https://www.ecomvestors.com/assets/avatars/6.png',
         name: 'Ben',
-        country: 'هولندا',
+        country: 'Netherlands',
     },
 ];
 
@@ -79,7 +79,7 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
                 </p>
             )}
             <div className="flex items-center gap-4">
-                <div className="text-right">
+                <div className="text-left">
                     <p className="font-medium text-white">{testimonial.name}</p>
                     <p className="text-sm text-gray-400">{testimonial.country}</p>
                 </div>
@@ -104,7 +104,7 @@ const MarqueeColumn = ({ testimonials, reverse = false, duration = "80s" }: { te
 
 const Tickers: React.FC = () => {
     return (
-        <section dir="rtl" className="py-10 sm:py-20 overflow-hidden text-center text-white">
+        <section dir="rtl" className="py-10 sm:py-20 overflow-hidden text-center text-white relative z-10">
              <style>{`
                 @keyframes marquee-vertical {
                     from { transform: translateY(0); }
@@ -121,9 +121,9 @@ const Tickers: React.FC = () => {
                 }
             `}</style>
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
-                <a href="#" className="text-sm text-green-400 font-semibold mb-2 inline-block">
+                <p className="text-sm text-green-400 font-semibold mb-2 inline-block">
                     شهادات حقيقية
-                </a>
+                </p>
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                     هل أنت مستعد تكون الصورة القادمة على هذا الجدار؟
                 </h2>

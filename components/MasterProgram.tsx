@@ -65,9 +65,9 @@ const MasterProgram: React.FC = () => {
                         }
                     >
                         <div className="mb-12 text-center">
-                            <a href="#" className="mb-2 inline-block text-sm font-semibold text-green-400">
+                            <p className="mb-2 inline-block text-sm font-semibold text-green-400">
                                 برنامج الماستر
-                            </a>
+                            </p>
                             <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">
                                 كل ما تحتاجه للنجاح
                             </h2>
