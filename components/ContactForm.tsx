@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Button from './ui/Button';
 
 // TODO: Replace this placeholder with the actual Google Apps Script Web App URL.
-const GOOGLE_SHEET_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwOJiIntf8NGac0AgDnwZLns4_tIUAd35R-p6dFmPKuvh08e38btpf5DaX0HGGj2SX8rg/exec';
+const GOOGLE_SHEET_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx2wjGlV-42BBCCaP2rkC-2hKTsqeL-tiOSHcVeMOXrIUI8GKJjhxXzNLTp-oRZG-MBlw/exec';
 
 // A simple loading spinner icon to replace Radix's ReloadIcon
 const ReloadIcon = ({ className }: { className?: string }) => (
@@ -95,7 +95,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, setFormData }) => {
         setFormData({
             fullName: '',
             phoneNumber: '',
-            selectedPlan: 'الأساسية',
+            selectedPlan: 'Basic',
             whereDidYouHear: 'INSTAGRAM',
             experienceInEcom: 'NO',
             budgetRange: '1K$ TO 2.5K$',
@@ -115,7 +115,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, setFormData }) => {
         const dataForSheet = {
             FullName: formData.fullName,
             PhoneNumber: formData.phoneNumber,
-            SelectedPlan: formData.selectedPlan,
+            Plan: formData.selectedPlan,
             WhereDidYouHear: formData.whereDidYouHear,
             ExperienceInEcom: formData.experienceInEcom,
             BudgetRange: formData.budgetRange,
@@ -196,7 +196,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, setFormData }) => {
                             </FormItem>
 
                             <FormItem>
-                                <FormLabel htmlFor="selectedPlan">الخطة</FormLabel>
+                                <FormLabel htmlFor="selectedPlan">ما هي الخطة التي تهتم بها؟</FormLabel>
                                 <select
                                     id="selectedPlan"
                                     name="selectedPlan"
@@ -204,12 +204,11 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, setFormData }) => {
                                     onChange={handleChange}
                                     className="flex h-10 w-full rounded-md border border-gray-700 bg-[#0f130a7a] px-3 py-2 text-sm text-white ring-offset-black file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                                 >
-                                    <option value="الأساسية">الأساسية</option>
-                                    <option value="الاحترافية">الاحترافية</option>
-                                    <option value="المميزة">المميزة</option>
+                                    <option value="Basic">الأساسية</option>
+                                    <option value="Pro">الاحترافية</option>
+                                    <option value="Premium">المميزة</option>
                                 </select>
                                 <FormMessage>{errors.selectedPlan}</FormMessage>
-                                <FormDescription>اختر الخطة التي تهتم بها.</FormDescription>
                             </FormItem>
 
                             <FormItem>
@@ -248,14 +247,14 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, setFormData }) => {
                                 <div className="flex flex-col space-y-1">
                                     {['1K$ TO 2.5K$', '2.5K$ TO 5K$', '+5K$'].map(value => {
                                          const labels: { [key: string]: string } = {
-                                            '1K$ TO 2.5K$': '2.5K$ من 1K$ إلى',
+                                            '1K$ TO 2.5K$': 'من 1K$ إلى 2.5K$',
                                             '2.5K$ TO 5K$': 'من 2.5K$ إلى 5K$',
-                                            '+5K$': '+5K$'
+                                            '+5K$': 'أكثر من 5K$'
                                         };
                                         return (
                                             <div key={value} className="flex items-center gap-x-3">
                                                 <input type="radio" id={`budget_${value}`} name="budgetRange" value={value} checked={formData.budgetRange === value} onChange={(e) => handleRadioChange('budgetRange', e.target.value)} className="h-4 w-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-green-500" />
-                                                <label htmlFor={`budget_${value}`} className="font-normal text-gray-300"><span dir="ltr">{labels[value]}</span></label>
+                                                <label htmlFor={`budget_${value}`} className="font-normal text-gray-300">{labels[value]}</label>
                                             </div>
                                         )
                                     })}

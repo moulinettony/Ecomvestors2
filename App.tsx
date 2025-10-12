@@ -18,7 +18,7 @@ const App: React.FC = () => {
   const [formData, setFormData] = useState({
         fullName: '',
         phoneNumber: '',
-        selectedPlan: 'الأساسية',
+        selectedPlan: 'Basic',
         whereDidYouHear: 'INSTAGRAM',
         experienceInEcom: 'NO',
         budgetRange: '1K$ TO 2.5K$',

@@ -2,6 +2,7 @@ import React from 'react';
 
 interface Plan {
     name: string;
+    id: string;
     price: string;
     features: string[];
     isPopular: boolean;
@@ -10,6 +11,7 @@ interface Plan {
 const plans: Plan[] = [
     {
         name: 'الأساسية',
+        id: 'Basic',
         price: '850',
         features: [
             '+75 فيديو تدريبي، وصول فوري',
@@ -21,6 +23,7 @@ const plans: Plan[] = [
     },
     {
         name: 'الاحترافية',
+        id: 'Pro',
         price: '1,500',
         features: [
             '+95 فيديو تدريبي، وصول فوري',
@@ -33,6 +36,7 @@ const plans: Plan[] = [
     },
     {
         name: 'المميزة',
+        id: 'Premium',
         price: '4,000',
         features: [
             '+115 فيديو تدريبي، وصول فوري',
@@ -66,8 +70,8 @@ interface PricingSectionProps {
 
 
 const PricingSection: React.FC<PricingSectionProps> = ({ setFormData }) => {
-    const handlePlanSelect = (planName: string) => {
-        setFormData(prev => ({ ...prev, selectedPlan: planName }));
+    const handlePlanSelect = (planId: string) => {
+        setFormData(prev => ({ ...prev, selectedPlan: planId }));
     };
     
     return (
@@ -83,7 +87,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({ setFormData }) => {
                         اختر الخطة التي تناسبك
                     </h1>
                     <p className="mt-3 text-base leading-8 text-gray-400">
-                        .ابدأ رحلتك نحو النجاح اليوم. خطط مرنة مصممة لتلبية احتياجاتك في كل مرحلة من مراحل نموك
+                        ابدأ رحلتك نحو النجاح اليوم. خطط مرنة مصممة لتلبية احتياجاتك في كل مرحلة من مراحل نموك.
                     </p>
                 </div>
                 <div className="mt-20 grid grid-cols-1 items-center gap-8 lg:grid-cols-3">
@@ -145,7 +149,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({ setFormData }) => {
 
                             <a
                                 href="#form"
-                                onClick={() => handlePlanSelect(plan.name)}
+                                onClick={() => handlePlanSelect(plan.id)}
                                 className="mt-6 inline-flex h-11 w-full transform-gpu items-center justify-center gap-2 whitespace-nowrap rounded bg-green-700 px-8 text-sm font-bold text-white shadow-2xl shadow-green-500/50 ring-offset-background transition-transform duration-200 hover:scale-105 hover:bg-[#1d9248] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 active:scale-95 active:bg-green-950 disabled:pointer-events-none disabled:opacity-50"
                             >
                                 ابدأ الآن
