@@ -10,7 +10,7 @@ const features: Array<{
         title: 'أحدث الطرق والهياكل',
         description:
             'كعضو في برنامج EV، ستحصل على وصول حصري إلى أكثر من 35 تحديث فيديو حول طرق وهياكل الدفع عند الاستلام. كن على اطلاع بأحدث المعلومات وتعلم الهياكل اللازمة لتأسيس عملك بنجاح.',
-        image: 'https://www.ecomvestors.com/assets/images/image-1.png',
+        image: 'https://ecomvestors-ecomvestors.vercel.app/assets/images/image-1.png',
     },
     {
         title: 'تدريب فردي يومي',

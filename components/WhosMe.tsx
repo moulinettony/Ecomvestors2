@@ -8,7 +8,7 @@ const WhosMe: React.FC = () => {
             <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-4 sm:px-6 md:px-8 lg:grid-cols-2">
                 <div role="display" className="relative flex h-auto w-full flex-col items-center justify-center">
                     <img
-                        src="https://www.ecomvestors.com/assets/images/aassim.jpg"
+                        src="https://ecomvestors-ecomvestors.vercel.app/assets/images/aassim.jpg"
                         alt="Aassim El Kihel"
                         className="aspect-square max-w-[350px] size-full rounded-3xl object-cover"
                     />

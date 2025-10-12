@@ -11,16 +11,16 @@ interface Testimonial {
 
 const column1Data: Testimonial[] = [
     {
-        image: 'https://www.ecomvestors.com/assets/testimonials/images/image-1.jpg',
+        image: 'https://ecomvestors-ecomvestors.vercel.app/assets/testimonials/images/image-1.jpg',
         quote: 'بدأت بمبلغ بسيط ولم أتوقع هذا النمو! مع Ecomvestors تعلمت أسرار اختيار المنتجات التي تبيع بسرعة.',
-        avatar: 'https://www.ecomvestors.com/assets/avatars/1.png',
+        avatar: 'https://ecomvestors-ecomvestors.vercel.app/assets/avatars/1.png',
         name: 'Ouassim',
         country: 'Netherlands',
     },
     {
-        image: 'https://www.ecomvestors.com/assets/testimonials/images/image-2.jpg',
+        image: 'https://ecomvestors-ecomvestors.vercel.app/assets/testimonials/images/image-2.jpg',
         quote: 'استراتيجيات Ecomvestors جعلت كل خطوة في التجارة الإلكترونية واضحة وسهلة. الأرباح اليومية بدأت تظهر من الأسبوع الأول.',
-        avatar: 'https://www.ecomvestors.com/assets/avatars/2.png',
+        avatar: 'https://ecomvestors-ecomvestors.vercel.app/assets/avatars/2.png',
         name: 'Amine',
         country: 'Netherlands',
     },
@@ -28,16 +28,16 @@ const column1Data: Testimonial[] = [
 
 const column2Data: Testimonial[] = [
     {
-        image: 'https://www.ecomvestors.com/assets/testimonials/images/image-3.jpg',
+        image: 'https://ecomvestors-ecomvestors.vercel.app/assets/testimonials/images/image-3.jpg',
         quote: 'لم أكن أعلم أن منتجًا واحدًا يمكن أن يحدث فرقًا كبيرًا! التدريب مع Ecomvestors جعلني أحقق مبيعات أسرع مما توقعت.',
-        avatar: 'https://www.ecomvestors.com/assets/avatars/3.png',
+        avatar: 'https://ecomvestors-ecomvestors.vercel.app/assets/avatars/3.png',
         name: 'Yassine',
         country: 'France',
     },
     {
-        image: 'https://www.ecomvestors.com/assets/testimonials/images/image-4.jpg',
+        image: 'https://ecomvestors-ecomvestors.vercel.app/assets/testimonials/images/image-4.jpg',
         quote: 'مع كل نصيحة من Ecomvestors، شعرت أنني أقترب أكثر من النجاح. المنتجات الرابحة بدأت تعكس أرباحًا حقيقية.',
-        avatar: 'https://www.ecomvestors.com/assets/avatars/4.png',
+        avatar: 'https://ecomvestors-ecomvestors.vercel.app/assets/avatars/4.png',
         name: 'Othman',
         country: 'France',
     },
@@ -45,16 +45,16 @@ const column2Data: Testimonial[] = [
 
 const column3Data: Testimonial[] = [
     {
-        image: 'https://www.ecomvestors.com/assets/testimonials/images/image-5.jpg',
+        image: 'https://ecomvestors-ecomvestors.vercel.app/assets/testimonials/images/image-5.jpg',
         quote: 'Ecomvestors غيرت طريقة تفكيري في التجارة الإلكترونية. الآن أعرف كيف أستثمر 100$ وأحقق نتائج ملموسة.',
-        avatar: 'https://www.ecomvestors.com/assets/avatars/5.png',
+        avatar: 'https://ecomvestors-ecomvestors.vercel.app/assets/avatars/5.png',
         name: 'Sarah',
         country: 'USA',
     },
     {
-        image: 'https://www.ecomvestors.com/assets/testimonials/images/image-6.jpg',
+        image: 'https://ecomvestors-ecomvestors.vercel.app/assets/testimonials/images/image-6.jpg',
         quote: 'التدريب العملي مع Ecomvestors أعطاني رؤية واضحة للسوق. المنتجات الرابحة بدأت تولد دخل يومي مستمر.',
-        avatar: 'https://www.ecomvestors.com/assets/avatars/6.png',
+        avatar: 'https://ecomvestors-ecomvestors.vercel.app/assets/avatars/6.png',
         name: 'Dounia',
         country: 'Netherlands',
     },
