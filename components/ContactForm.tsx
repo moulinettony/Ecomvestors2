@@ -1,9 +1,16 @@
 
+
 import React, { useState } from 'react';
 import Button from './ui/Button';
 
-// TODO: Replace this placeholder with the actual Google Apps Script Web App URL.
-const GOOGLE_SHEET_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx2wjGlV-42BBCCaP2rkC-2hKTsqeL-tiOSHcVeMOXrIUI8GKJjhxXzNLTp-oRZG-MBlw/exec';
+// =================================================================================
+// IMPORTANT: PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE
+// =================================================================================
+// This is the URL you received after deploying the Google Apps Script.
+// Without this, the form will not submit data to your Google Sheet.
+// Example URL: "https://script.google.com/macros/s/ABCdeFGHIJKL-MNOpqrSTUVWX/exec"
+const GOOGLE_SHEET_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxLnOi4zASnFb51aAsmPptG91rxqsjyiMwfKWj4gLa52vQhH_KCrL9LONlONGc-RoO9ow/exec';
+
 
 // A simple loading spinner icon to replace Radix's ReloadIcon
 const ReloadIcon = ({ className }: { className?: string }) => (
@@ -106,31 +113,41 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, setFormData }) => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        // FIX: Replaced `=== ''` with a falsy check to resolve a TypeScript error.
+        // The constant `GOOGLE_SHEET_SCRIPT_URL` has a literal type of a non-empty string,
+        // which will never be equal to `''`. This check preserves the intent of guarding
+        // against an unconfigured URL.
+        if (!GOOGLE_SHEET_SCRIPT_URL || GOOGLE_SHEET_SCRIPT_URL.includes('YOUR_GOOGLE_SHEET_SCRIPT_URL_HERE')) {
+            console.error("CRITICAL: Google Sheet script URL is not set. Please replace the placeholder in components/ContactForm.tsx with your actual Web App URL.");
+            setSubmissionStatus('error');
+            return;
+        }
+
         if (!validate()) {
             return;
         }
         setLoading(true);
         setSubmissionStatus(null);
 
-        const dataForSheet = {
-            FullName: formData.fullName,
-            PhoneNumber: formData.phoneNumber,
-            Plan: formData.selectedPlan,
-            WhereDidYouHear: formData.whereDidYouHear,
-            ExperienceInEcom: formData.experienceInEcom,
-            BudgetRange: formData.budgetRange,
-        };
+        // Use FormData for a more robust submission method
+        const submissionFormData = new FormData();
+        submissionFormData.append('FullName', formData.fullName);
+        submissionFormData.append('PhoneNumber', formData.phoneNumber);
+        submissionFormData.append('Plan', formData.selectedPlan);
+        submissionFormData.append('WhereDidYouHear', formData.whereDidYouHear);
+        submissionFormData.append('ExperienceInEcom', formData.experienceInEcom);
+        submissionFormData.append('BudgetRange', formData.budgetRange);
+
 
         try {
             await fetch(GOOGLE_SHEET_SCRIPT_URL, {
                 method: 'POST',
-                mode: 'no-cors', // Use 'no-cors' to prevent CORS errors on fire-and-forget requests
-                body: JSON.stringify(dataForSheet),
+                mode: 'no-cors',
+                body: submissionFormData,
             });
             
             setSubmissionStatus('success');
-            
-            // Reset form
             resetForm();
 
         } catch (err: any) {
