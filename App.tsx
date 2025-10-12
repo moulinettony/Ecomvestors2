@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Announcement from './components/Announcement';
 import HeroSection from './components/HeroSection';
 import NewHeroSection from './components/NewHeroSection';
@@ -15,6 +15,16 @@ import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
+  const [formData, setFormData] = useState({
+        fullName: '',
+        phoneNumber: '',
+        selectedPlan: 'الأساسية',
+        whereDidYouHear: 'INSTAGRAM',
+        experienceInEcom: 'NO',
+        budgetRange: '1K$ TO 2.5K$',
+        termsAccepted: false,
+    });
+
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-between overflow-hidden bg-[#181c14] border-y border-green-900">
       <main className="w-full">
@@ -27,10 +37,10 @@ const App: React.FC = () => {
         <MasterProgram />
         <WhosMe />
         <Wins />
-        <PricingSection />
+        <PricingSection setFormData={setFormData} />
         <FrequentlyAskedQuestions />
         <Question />
-        <ContactForm />
+        <ContactForm formData={formData} setFormData={setFormData} />
       </main>
       <Footer />
     </div>

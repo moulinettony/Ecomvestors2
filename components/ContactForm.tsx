@@ -39,25 +39,35 @@ const FormMessage: React.FC<{ children?: React.ReactNode }> = ({ children }) => 
     children ? <p className="text-[0.8rem] font-medium text-red-500">{children}</p> : null
 );
 
-const ContactForm: React.FC = () => {
+interface FormData {
+    fullName: string;
+    phoneNumber: string;
+    selectedPlan: string;
+    whereDidYouHear: string;
+    experienceInEcom: string;
+    budgetRange: string;
+    termsAccepted: boolean;
+}
+
+interface ContactFormProps {
+    formData: FormData;
+    setFormData: React.Dispatch<React.SetStateAction<FormData>>;
+}
+
+const ContactForm: React.FC<ContactFormProps> = ({ formData, setFormData }) => {
     const [isLoading, setLoading] = useState<boolean>(false);
     const [submissionStatus, setSubmissionStatus] = useState<'success' | 'error' | null>(null);
-    const [formData, setFormData] = useState({
-        fullName: '',
-        phoneNumber: '',
-        whereDidYouHear: 'INSTAGRAM',
-        experienceInEcom: 'NO',
-        budgetRange: '1K$ TO 2.5K$',
-        termsAccepted: false,
-    });
     const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         if (submissionStatus) setSubmissionStatus(null);
-        const { name, value, type, checked } = e.target;
+        const target = e.target;
+        const name = target.name;
+        const value = target.type === 'checkbox' ? (target as HTMLInputElement).checked : target.value;
+        
         setFormData(prev => ({
             ...prev,
-            [name]: type === 'checkbox' ? checked : value,
+            [name]: value,
         }));
     };
 
@@ -81,6 +91,18 @@ const ContactForm: React.FC = () => {
         return Object.keys(newErrors).length === 0;
     };
 
+    const resetForm = () => {
+        setFormData({
+            fullName: '',
+            phoneNumber: '',
+            selectedPlan: 'الأساسية',
+            whereDidYouHear: 'INSTAGRAM',
+            experienceInEcom: 'NO',
+            budgetRange: '1K$ TO 2.5K$',
+            termsAccepted: false,
+        });
+        setErrors({});
+    }
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -93,6 +115,7 @@ const ContactForm: React.FC = () => {
         const dataForSheet = {
             FullName: formData.fullName,
             PhoneNumber: formData.phoneNumber,
+            SelectedPlan: formData.selectedPlan,
             WhereDidYouHear: formData.whereDidYouHear,
             ExperienceInEcom: formData.experienceInEcom,
             BudgetRange: formData.budgetRange,
@@ -108,15 +131,7 @@ const ContactForm: React.FC = () => {
             setSubmissionStatus('success');
             
             // Reset form
-            setFormData({
-                fullName: '',
-                phoneNumber: '',
-                whereDidYouHear: 'INSTAGRAM',
-                experienceInEcom: 'NO',
-                budgetRange: '1K$ TO 2.5K$',
-                termsAccepted: false,
-            });
-            setErrors({});
+            resetForm();
 
         } catch (err: any) {
             console.error('Error submitting form:', err);
@@ -150,8 +165,9 @@ const ContactForm: React.FC = () => {
                     <div className="w-full">
                         <form onSubmit={handleSubmit} className="w-full space-y-6">
                             <FormItem>
-                                <FormLabel>الاسم الكامل</FormLabel>
+                                <FormLabel htmlFor="fullName">الاسم الكامل</FormLabel>
                                 <input
+                                    id="fullName"
                                     name="fullName"
                                     value={formData.fullName}
                                     onChange={handleChange}
@@ -164,8 +180,9 @@ const ContactForm: React.FC = () => {
                             </FormItem>
 
                             <FormItem>
-                                <FormLabel>رقم الهاتف</FormLabel>
+                                <FormLabel htmlFor="phoneNumber">رقم الهاتف</FormLabel>
                                 <input
+                                    id="phoneNumber"
                                     name="phoneNumber"
                                     value={formData.phoneNumber}
                                     onChange={handleChange}
@@ -176,6 +193,23 @@ const ContactForm: React.FC = () => {
                                 />
                                 <FormMessage>{errors.phoneNumber}</FormMessage>
                                 <FormDescription>نحتاج إلى رقم هاتفك للتواصل معك.</FormDescription>
+                            </FormItem>
+
+                            <FormItem>
+                                <FormLabel htmlFor="selectedPlan">الخطة</FormLabel>
+                                <select
+                                    id="selectedPlan"
+                                    name="selectedPlan"
+                                    value={formData.selectedPlan}
+                                    onChange={handleChange}
+                                    className="flex h-10 w-full rounded-md border border-gray-700 bg-[#0f130a7a] px-3 py-2 text-sm text-white ring-offset-black file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                                >
+                                    <option value="الأساسية">الأساسية</option>
+                                    <option value="الاحترافية">الاحترافية</option>
+                                    <option value="المميزة">المميزة</option>
+                                </select>
+                                <FormMessage>{errors.selectedPlan}</FormMessage>
+                                <FormDescription>اختر الخطة التي تهتم بها.</FormDescription>
                             </FormItem>
 
                             <FormItem>
@@ -270,13 +304,7 @@ const ContactForm: React.FC = () => {
                                     shape={'pill'}
                                     size="md"
                                     className="py-2 hover:bg-[#0f130a7a]"
-                                    onClick={() => {
-                                        setFormData({
-                                            fullName: '', phoneNumber: '', whereDidYouHear: 'INSTAGRAM',
-                                            experienceInEcom: 'NO', budgetRange: '1K$ TO 2.5K$', termsAccepted: false,
-                                        });
-                                        setErrors({});
-                                    }}
+                                    onClick={resetForm}
                                 >
                                     إعادة تعيين
                                 </Button>

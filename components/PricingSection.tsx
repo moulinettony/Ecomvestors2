@@ -50,7 +50,26 @@ const cardStyle: React.CSSProperties = {
     border: '1px solid #1e2815',
 };
 
-const PricingSection = () => {
+interface FormData {
+    fullName: string;
+    phoneNumber: string;
+    selectedPlan: string;
+    whereDidYouHear: string;
+    experienceInEcom: string;
+    budgetRange: string;
+    termsAccepted: boolean;
+}
+
+interface PricingSectionProps {
+    setFormData: React.Dispatch<React.SetStateAction<FormData>>;
+}
+
+
+const PricingSection: React.FC<PricingSectionProps> = ({ setFormData }) => {
+    const handlePlanSelect = (planName: string) => {
+        setFormData(prev => ({ ...prev, selectedPlan: planName }));
+    };
+    
     return (
         <div dir="rtl" className="my-12 px-4 text-white">
             <div className="mx-auto max-w-7xl">
@@ -126,6 +145,7 @@ const PricingSection = () => {
 
                             <a
                                 href="#form"
+                                onClick={() => handlePlanSelect(plan.name)}
                                 className="mt-6 inline-flex h-11 w-full transform-gpu items-center justify-center gap-2 whitespace-nowrap rounded bg-green-700 px-8 text-sm font-bold text-white shadow-2xl shadow-green-500/50 ring-offset-background transition-transform duration-200 hover:scale-105 hover:bg-[#1d9248] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 active:scale-95 active:bg-green-950 disabled:pointer-events-none disabled:opacity-50"
                             >
                                 ابدأ الآن
