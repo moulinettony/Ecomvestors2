@@ -12,14 +12,14 @@ interface Testimonial {
 const column1Data: Testimonial[] = [
     {
         image: 'https://www.ecomvestors.com/assets/testimonials/images/image-1.jpg',
-        quote: 'الأفضل.. تواصل سريع وتنفيذ سريع. الهدف التالي هو 20 ألف يوميًا.',
+        quote: 'بدأت بمبلغ بسيط ولم أتوقع هذا النمو! مع Ecomvestors تعلمت أسرار اختيار المنتجات التي تبيع بسرعة.',
         avatar: 'https://www.ecomvestors.com/assets/avatars/1.png',
         name: 'Ouassim',
         country: 'Netherlands',
     },
     {
         image: 'https://www.ecomvestors.com/assets/testimonials/images/image-2.jpg',
-        quote: 'رؤى حقيقية، لا يوجد مثيل لهذا.',
+        quote: 'استراتيجيات Ecomvestors جعلت كل خطوة في التجارة الإلكترونية واضحة وسهلة. الأرباح اليومية بدأت تظهر من الأسبوع الأول.',
         avatar: 'https://www.ecomvestors.com/assets/avatars/2.png',
         name: 'Chris',
         country: 'Netherlands',
@@ -29,14 +29,14 @@ const column1Data: Testimonial[] = [
 const column2Data: Testimonial[] = [
     {
         image: 'https://www.ecomvestors.com/assets/testimonials/images/image-3.jpg',
-        quote: 'أنا هنا منذ شهرين، وما زلت أتفاجأ في كل مرة بالدعم والنصائح التي أتلقاها.',
+        quote: 'لم أكن أعلم أن منتجًا واحدًا يمكن أن يحدث فرقًا كبيرًا! التدريب مع Ecomvestors جعلني أحقق مبيعات أسرع مما توقعت.',
         avatar: 'https://www.ecomvestors.com/assets/avatars/3.png',
         name: 'Louis',
         country: 'France',
     },
     {
         image: 'https://www.ecomvestors.com/assets/testimonials/images/image-4.jpg',
-        quote: 'الأفضل.. تواصل سريع وتنفيذ سريع. الهدف التالي هو 20 ألف يوميًا.',
+        quote: 'مع كل نصيحة من Ecomvestors، شعرت أنني أقترب أكثر من النجاح. المنتجات الرابحة بدأت تعكس أرباحًا حقيقية.',
         avatar: 'https://www.ecomvestors.com/assets/avatars/4.png',
         name: 'Ouassim',
         country: 'France',
@@ -46,14 +46,14 @@ const column2Data: Testimonial[] = [
 const column3Data: Testimonial[] = [
     {
         image: 'https://www.ecomvestors.com/assets/testimonials/images/image-5.jpg',
-        quote: 'الشهر الأول من التدريب 🫡 لم أتوقع هذا يا رفاق.',
+        quote: 'Ecomvestors غيرت طريقة تفكيري في التجارة الإلكترونية. الآن أعرف كيف أستثمر 100$ وأحقق نتائج ملموسة.',
         avatar: 'https://www.ecomvestors.com/assets/avatars/5.png',
         name: 'Josh',
         country: 'USA',
     },
     {
         image: 'https://www.ecomvestors.com/assets/testimonials/images/image-6.jpg',
-        quote: '', // Empty quote handled gracefully
+        quote: 'التدريب العملي مع Ecomvestors أعطاني رؤية واضحة للسوق. المنتجات الرابحة بدأت تولد دخل يومي مستمر.',
         avatar: 'https://www.ecomvestors.com/assets/avatars/6.png',
         name: 'Ben',
         country: 'Netherlands',
@@ -125,7 +125,7 @@ const Tickers: React.FC = () => {
                     شهادات حقيقية
                 </p>
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                    هل أنت مستعد تكون الصورة القادمة على هذا الجدار؟
+                    نتطلع أيضًا إلى مشاركتكم بشهاداتكم وتجاربكم القيمة.
                 </h2>
                 <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto mb-12">
                     استمع مباشرة من أعضائنا الذين يغيرون حياتهم ويحققون نجاحًا لا يصدق مع EcomVestors.
