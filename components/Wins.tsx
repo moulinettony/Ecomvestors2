@@ -180,7 +180,7 @@ const Wins: React.FC = () => {
                     تحميل المزيد
                 </Button>
             )}
-             <a href="#" className="no-underline">
+             <a href="https://www.instagram.com/mraassim/" target="_blank" className="no-underline">
                 <Button 
                     variant="secondary" 
                     shape="pill" 
