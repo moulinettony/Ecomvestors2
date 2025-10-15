@@ -179,7 +179,7 @@ const HeroSection: React.FC = () => {
                                             style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
                                             <div className="wistia_responsive_wrapper" style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}>
                                                 <div
-                                                    className="wistia_embed wistia_async_wea4kqvck2 autoPlay=true muted=true videoFoam=true playerColor=32d09f controlsVisibleOnLoad=true settingsControl=false wistiaButton=false plugin[wistia-branding][remove]=true"
+                                                    className="wistia_embed wistia_async_ew9hbdk8ya autoPlay=true muted=true videoFoam=true playerColor=32d09f controlsVisibleOnLoad=true settingsControl=false wistiaButton=false plugin[wistia-branding][remove]=true"
                                                     style={{ height: '100%', position: 'relative', width: '100%' }}
                                                 >
                                                     &nbsp;
