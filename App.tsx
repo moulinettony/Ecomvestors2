@@ -8,7 +8,6 @@ import WhosMe from './components/WhosMe';
 import Wins from './components/Wins';
 import Tickers from './components/Tickers';
 import BottomGrid from './components/BottomGrid';
-import PricingSection from './components/PricingSection';
 import FrequentlyAskedQuestions from './components/FrequentlyAskedQuestions';
 import Question from './components/Question';
 import ContactForm from './components/ContactForm';
@@ -37,7 +36,6 @@ const App: React.FC = () => {
         <MasterProgram />
         <WhosMe />
         <Wins />
-        <PricingSection setFormData={setFormData} />
         <FrequentlyAskedQuestions />
         <Question />
         <ContactForm formData={formData} setFormData={setFormData} />
