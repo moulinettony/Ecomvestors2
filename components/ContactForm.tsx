@@ -1,5 +1,6 @@
 
 
+
 import React, { useState } from 'react';
 import Button from './ui/Button';
 
@@ -212,7 +213,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, setFormData }) => {
                                 <FormDescription>نحتاج إلى رقم هاتفك للتواصل معك.</FormDescription>
                             </FormItem>
 
-                            {/* <FormItem>
+                            <FormItem>
                                 <FormLabel htmlFor="selectedPlan">ما هي الخطة التي تهتم بها؟</FormLabel>
                                 <select
                                     id="selectedPlan"
@@ -226,7 +227,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, setFormData }) => {
                                     <option value="Premium">المميزة</option>
                                 </select>
                                 <FormMessage>{errors.selectedPlan}</FormMessage>
-                            </FormItem> */}
+                            </FormItem>
 
                             <FormItem>
                                 <FormLabel>من أين سمعت عنا؟</FormLabel>
